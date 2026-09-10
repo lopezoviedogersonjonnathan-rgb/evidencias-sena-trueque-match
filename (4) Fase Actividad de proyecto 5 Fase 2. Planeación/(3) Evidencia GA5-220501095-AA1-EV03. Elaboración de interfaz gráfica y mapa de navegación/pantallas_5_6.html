@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TruequeMatch — Pantallas 5 y 6</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #111;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 24px;
+    gap: 64px;
+  }
+
+  .section-label {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #C0392B;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  /* ── PHONE SHELL ── */
+  .phone-wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .phone {
+    width: 260px;
+    background: #1A1A1A;
+    border-radius: 36px;
+    border: 1.5px solid #2C2C2C;
+    overflow: hidden;
+    position: relative;
+    box-shadow:
+      0 0 0 6px #0D0D0D,
+      0 32px 64px rgba(0,0,0,0.7),
+      0 0 40px rgba(192,57,43,0.08);
+  }
+
+  /* Status bar */
+  .status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 18px 6px;
+    background: #1A1A1A;
+  }
+  .status-time { font-family: 'Nunito', sans-serif; font-size: 11px; font-weight: 700; color: #F5F0EB; }
+  .status-icons { display: flex; gap: 4px; align-items: center; }
+  .status-icons span { width: 14px; height: 8px; border: 1.5px solid #F5F0EB; border-radius: 2px; position: relative; }
+  .status-icons span::after { content:''; position:absolute; left:1.5px; top:1.5px; width:8px; height:4px; background:#F5F0EB; border-radius:1px; }
+  .wifi-icon { font-size: 9px; color: #F5F0EB; }
+
+  /* Top bar with back arrow */
+  .top-bar {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px 4px;
+    gap: 10px;
+  }
+  .back-btn {
+    color: #F5F0EB;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    line-height: 1;
+  }
+  .top-title {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #F5F0EB;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+  .top-bar-right { margin-left: auto; }
+  .notif-btn { position: relative; }
+  .notif-btn span { font-size: 16px; }
+  .badge {
+    position: absolute; top: -4px; right: -4px;
+    background: #C0392B; color: #fff;
+    font-size: 8px; font-weight: 800;
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .avatar-sm {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: #C0392B;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px; color: #fff;
+  }
+
+  /* Screen content */
+  .screen { padding: 0 0 60px; overflow: hidden; }
+
+  /* ─── PANTALLA 5: PUBLICAR ─── */
+  .pub-header {
+    background: linear-gradient(180deg, #1A1A1A 0%, #1A1A1A 100%);
+    padding: 12px 16px 10px;
+    border-bottom: 1px solid #2C2C2C;
+  }
+
+  .img-upload-area {
+    margin: 14px 14px 0;
+    background: #222;
+    border: 1.5px dashed #C0392B;
+    border-radius: 14px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    position: relative;
+  }
+  .img-upload-area .upload-icon { font-size: 22px; }
+  .img-upload-area .upload-text {
+    font-size: 10px; color: #888; font-weight: 600;
+    text-align: center; line-height: 1.4;
+  }
+  .img-counter {
+    position: absolute; bottom: 8px; right: 10px;
+    font-size: 9px; color: #C0392B; font-weight: 700;
+  }
+
+  .thumb-row {
+    display: flex; gap: 6px;
+    padding: 8px 14px 0;
+  }
+  .thumb {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: #2C2C2C;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px;
+    border: 1.5px solid #3A3A3A;
+  }
+  .thumb.active { border-color: #C0392B; background: #3A1A1A; }
+  .thumb-add {
+    width: 36px; height: 36px; border-radius: 8px;
+    border: 1.5px dashed #555;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; color: #555;
+  }
+
+  .form-section { padding: 10px 14px 0; }
+  .field-label {
+    font-size: 9px; font-weight: 800;
+    color: #C0392B; letter-spacing: 1.5px;
+    text-transform: uppercase; margin-bottom: 4px;
+  }
+  .field-input {
+    background: #2C2C2C;
+    border: 1px solid #3A3A3A;
+    border-radius: 10px;
+    padding: 9px 12px;
+    color: #F5F0EB;
+    font-size: 11px;
+    font-family: 'Nunito', sans-serif;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .field-input.placeholder { color: #666; }
+  .field-input.textarea { height: 50px; }
+  .char-count {
+    text-align: right; font-size: 8px; color: #555;
+    margin-top: -8px; margin-bottom: 8px;
+  }
+
+  .cat-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 6px; margin-bottom: 10px;
+  }
+  .cat-chip {
+    background: #2C2C2C;
+    border: 1.5px solid #3A3A3A;
+    border-radius: 20px;
+    padding: 6px 10px;
+    font-size: 10px; font-weight: 700;
+    color: #888;
+    display: flex; align-items: center; gap: 5px;
+    cursor: pointer;
+  }
+  .cat-chip.selected {
+    background: #3A1A1A;
+    border-color: #C0392B;
+    color: #F5F0EB;
+  }
+  .cat-chip .cat-icon { font-size: 12px; }
+
+  .btn-primary {
+    background: #C0392B;
+    border: none; border-radius: 12px;
+    width: 100%; padding: 12px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px; letter-spacing: 1.5px;
+    color: #fff; cursor: pointer;
+    margin-top: 4px;
+  }
+
+  /* Tab bar */
+  .tab-bar {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: #111;
+    border-top: 1px solid #2C2C2C;
+    display: flex; justify-content: space-around;
+    padding: 8px 0 10px;
+  }
+  .tab-item {
+    display: flex; flex-direction: column;
+    align-items: center; gap: 3px;
+    font-size: 7px; color: #555; font-weight: 700;
+    cursor: pointer;
+  }
+  .tab-item span { font-size: 16px; }
+  .tab-item.active { color: #F5F0EB; }
+  .tab-center {
+    background: #C0392B;
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin-top: -16px;
+    box-shadow: 0 0 16px rgba(192,57,43,0.5);
+    border: 2px solid #1A1A1A;
+  }
+  .tab-center span { font-size: 20px; color: #fff; }
+
+  /* ─── PANTALLA 6: PERFIL ─── */
+  .profile-header {
+    background: linear-gradient(180deg, #1A1A1A 0%, #222 100%);
+    padding: 14px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #2C2C2C;
+    position: relative;
+  }
+  .profile-avatar {
+    width: 62px; height: 62px; border-radius: 50%;
+    background: #C0392B;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px; color: #fff;
+    border: 2.5px solid #3A3A3A;
+    box-shadow: 0 0 20px rgba(192,57,43,0.3);
+    margin-bottom: 8px;
+  }
+  .profile-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px; color: #F5F0EB;
+    letter-spacing: 1px;
+  }
+  .profile-since {
+    font-size: 9px; color: #666; font-weight: 600;
+    margin-top: 2px;
+  }
+  .stars-row {
+    display: flex; align-items: center; gap: 4px;
+    margin-top: 6px;
+  }
+  .stars { font-size: 12px; letter-spacing: 1px; }
+  .rating-num {
+    font-size: 11px; font-weight: 800;
+    color: #F5F0EB;
+  }
+
+  .stats-row {
+    display: flex; gap: 8px;
+    padding: 12px 14px;
+    border-bottom: 1px solid #2C2C2C;
+  }
+  .stat-card {
+    flex: 1;
+    background: #222;
+    border: 1px solid #2C2C2C;
+    border-radius: 10px;
+    padding: 8px 6px;
+    text-align: center;
+  }
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px; color: #C0392B;
+    line-height: 1;
+  }
+  .stat-lbl {
+    font-size: 7.5px; color: #888; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    margin-top: 3px;
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px; color: #888;
+    letter-spacing: 2px;
+    padding: 10px 14px 4px;
+  }
+
+  .offer-row {
+    display: flex; align-items: center;
+    padding: 8px 14px;
+    gap: 10px;
+    border-bottom: 1px solid #1F1F1F;
+  }
+  .offer-thumb {
+    width: 38px; height: 38px; border-radius: 8px;
+    background: #2C2C2C;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .offer-info { flex: 1; }
+  .offer-title { font-size: 11px; font-weight: 700; color: #F5F0EB; }
+  .offer-cat {
+    font-size: 9px; font-weight: 700;
+    color: #C0392B; margin-top: 2px;
+  }
+  .offer-status {
+    font-size: 8px; font-weight: 800;
+    padding: 2px 7px; border-radius: 20px;
+  }
+  .offer-status.active { background: #1A3A1A; color: #4CAF50; }
+  .offer-status.pending { background: #3A2A1A; color: #FFA726; }
+
+  .trueque-row {
+    display: flex; align-items: center;
+    padding: 8px 14px; gap: 10px;
+    border-bottom: 1px solid #1F1F1F;
+  }
+  .trueque-icon {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: #2C2C2C;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; flex-shrink: 0;
+  }
+  .trueque-info { flex: 1; }
+  .trueque-title { font-size: 10px; font-weight: 700; color: #F5F0EB; }
+  .trueque-date { font-size: 8px; color: #666; margin-top: 1px; }
+  .badge-status {
+    font-size: 8px; font-weight: 800;
+    padding: 2px 7px; border-radius: 20px;
+  }
+  .badge-status.completado { background: #1A3A1A; color: #4CAF50; }
+  .badge-status.pendiente { background: #3A1A1A; color: #C0392B; }
+  .badge-status.evaluar {
+    background: #3A2A1A; color: #FFA726;
+    display: flex; align-items: center; gap: 3px;
+  }
+
+  .edit-btn {
+    background: transparent;
+    border: 1.5px solid #C0392B;
+    border-radius: 10px;
+    padding: 8px 14px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 14px; letter-spacing: 1px;
+    color: #C0392B; cursor: pointer;
+    margin: 10px 14px 4px;
+    width: calc(100% - 28px);
+  }
+  .logout-btn {
+    background: transparent;
+    border: 1px solid #2C2C2C;
+    border-radius: 10px;
+    padding: 8px 14px;
+    font-size: 10px; font-weight: 700;
+    color: #555; cursor: pointer;
+    margin: 0 14px 70px;
+    width: calc(100% - 28px);
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+  }
+
+  /* ── ELEMENTOS CARD (lado derecho) ── */
+  .elements-card {
+    width: 200px;
+    background: #1A1A1A;
+    border: 1px solid #2C2C2C;
+    border-radius: 14px;
+    padding: 14px;
+    align-self: flex-start;
+    margin-top: 40px;
+  }
+  .elements-card .card-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 12px; letter-spacing: 2px;
+    color: #C0392B; margin-bottom: 10px;
+  }
+  .el-item {
+    display: flex; align-items: flex-start;
+    gap: 7px; margin-bottom: 8px;
+  }
+  .el-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #C0392B; flex-shrink: 0; margin-top: 4px;
+  }
+  .el-text { font-size: 9.5px; color: #AAA; line-height: 1.5; font-weight: 600; }
+  .el-text strong { color: #F5F0EB; }
+
+  /* ── PANTALLA LABEL ── */
+  .phone-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 11px; letter-spacing: 2px;
+    color: #C0392B;
+    background: #1A1A1A;
+    border: 1px solid #C0392B;
+    border-radius: 20px;
+    padding: 3px 12px;
+    margin-bottom: 12px;
+    align-self: flex-start;
+  }
+
+  .screen-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #F5F0EB;
+    font-size: 28px;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+  .subtitle {
+    color: #555; font-size: 11px; font-weight: 600;
+    text-align: center; margin-bottom: 40px;
+    letter-spacing: 1px;
+  }
+
+  .divider {
+    width: 60px; height: 2px;
+    background: #C0392B;
+    border-radius: 2px;
+    margin: 0 auto 48px;
+  }
+</style>
+</head>
+<body>
+
+<div>
+  <h1>TRUEQUE MATCH</h1>
+  <p class="subtitle">GA5-220501095-AA1-EV03 · PROTOTIPOS DE SOFTWARE</p>
+  <div class="divider"></div>
+</div>
+
+<!-- ══ PANTALLA 5: PUBLICAR OFERTA ══ -->
+<div>
+  <p class="section-label">5 · PANTALLA DE PUBLICACIÓN DE OFERTA</p>
+  <div class="phone-wrap">
+
+    <!-- Teléfono -->
+    <div class="screen-wrapper">
+      <div class="phone-label">PANTALLA 5 — PUBLICAR OFERTA</div>
+      <div class="phone">
+        <!-- Status bar -->
+        <div class="status-bar">
+          <span class="status-time">9:41</span>
+          <div class="status-icons">
+            <span class="wifi-icon">▂▄▆</span>
+            <span></span>
+          </div>
+        </div>
+
+        <!-- Header -->
+        <div class="top-bar">
+          <div class="back-btn">←</div>
+          <div class="top-title">PUBLICAR OFERTA</div>
+        </div>
+
+        <div class="screen" style="max-height:500px;overflow:hidden;">
+
+          <!-- Upload area -->
+          <div class="img-upload-area">
+            <div class="upload-icon">📷</div>
+            <div class="upload-text">Toca para agregar fotos<br>de tu oferta</div>
+            <div class="img-counter">1 de 5 fotos</div>
+          </div>
+
+          <!-- Thumbnails -->
+          <div class="thumb-row">
+            <div class="thumb active">📱</div>
+            <div class="thumb-add">+</div>
+            <div class="thumb-add" style="opacity:0.4">+</div>
+            <div class="thumb-add" style="opacity:0.2">+</div>
+          </div>
+
+          <!-- Título -->
+          <div class="form-section">
+            <div class="field-label">Título de la oferta *</div>
+            <div class="field-input">Celular Xiaomi Redmi 10</div>
+            <div class="char-count">22 / 100</div>
+
+            <div class="field-label">Descripción *</div>
+            <div class="field-input textarea placeholder">Describe el estado, condiciones y detalles relevantes de tu oferta...</div>
+            <div class="char-count">0 / 500</div>
+
+            <div class="field-label">Categoría *</div>
+            <div class="cat-grid">
+              <div class="cat-chip selected"><span class="cat-icon">📦</span> Productos</div>
+              <div class="cat-chip"><span class="cat-icon">🔧</span> Servicios</div>
+              <div class="cat-chip"><span class="cat-icon">📚</span> Conocimientos</div>
+              <div class="cat-chip"><span class="cat-icon">✨</span> Experiencias</div>
+            </div>
+
+            <div class="field-label">¿Qué acepto a cambio?</div>
+            <div class="field-input placeholder" style="font-size:10px;color:#666;">Ej: servicios, conocimientos... (opcional)</div>
+
+            <button class="btn-primary">PUBLICAR OFERTA →</button>
+          </div>
+        </div>
+
+        <!-- Tab Bar -->
+        <div class="tab-bar">
+          <div class="tab-item"><span>🏠</span>Inicio</div>
+          <div class="tab-item"><span>🔍</span>Explorar</div>
+          <div class="tab-center"><span>+</span></div>
+          <div class="tab-item"><span>💬</span>Chat</div>
+          <div class="tab-item"><span>👤</span>Perfil</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card de elementos -->
+    <div class="elements-card">
+      <div class="card-title">ELEMENTOS DE ENTRADA</div>
+      <div class="el-item"><div class="el-dot"></div><div class="el-text"><strong>Subida de fotos</strong> (mín. 1, máx. 5) — JPG, PNG o WebP. Compresión automática.</div></div>
+      <div class="el-item"><div class="el-dot"></div><div class="el-text"><strong>Título</strong> — Texto libre, entre 5 y 100 caracteres, obligatorio.</div></div>
+      <div class="el-item"><div class="el-dot"></div><div class="el-text"><strong>Descripción</strong> — Mínimo 20 caracteres. Estado y condiciones de la oferta.</div></div>
+      <div class="el-item"><div class="el-dot"></div><div class="el-text"><strong>Categoría</strong> — Selector de 4 opciones: Productos, Servicios, Conocimientos o Experiencias.</div></div>
+      <div class="el-item"><div class="el-dot"></div><div class="el-text"><strong>¿Qué acepto a cambio?</strong> — Opcional. Define el tipo de contrapropuesta que se acepta.</div></div>
+      <div class="el-item"><div class="el-dot"></div><div class="el-text"><strong>Botón PUBLICAR OFERTA</strong> — Solo activo cuando los campos obligatorios están completos.</div></div>
+      <div class="el-item"><div class="el-dot"></div><div class="el-text">Requerimientos: <strong>RF04, RF11, RNF01, RNF05, RNF06</strong></div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ PANTALLA 6: PERFIL DE USUARIO ══ -->
+<div>
+  <p class="section-label">6 · PANTALLA DE PERFIL DE USUARIO</p>
+  <div class="phone-wrap">
+
+    <!-- Teléfono -->
+    <div class="screen-wrapper">
+      <div class="phone-label">PANTALLA 6 — PERFIL DE USUARIO</div>
+      <div class="phone">
+        <!-- Status bar -->
+        <div class="status-bar">
+          <span class="status-time">9:41</span>
+          <div class="status-icons">
+            <span class="wifi-icon">▂▄▆</span>
+            <span></span>
+          </div>
+        </div>
+
+        <!-- Header top bar -->
+        <div class="top-bar" style="justify-content:space-between;">
+          <div class="top-title">MI PERFIL</div>
+          <div style="font-size:14px;color:#888;cursor:pointer;">⚙️</div>
+        </div>
+
+        <div class="screen" style="max-height:500px;overflow:hidden;">
+
+          <!-- Profile header -->
+          <div class="profile-header">
+            <div class="profile-avatar">GJ</div>
+            <div class="profile-name">GERSON LÓPEZ</div>
+            <div class="profile-since">Miembro desde octubre 2025</div>
+            <div class="stars-row">
+              <div class="stars">★★★★☆</div>
+              <div class="rating-num">4.3</div>
+            </div>
+          </div>
+
+          <!-- Stats -->
+          <div class="stats-row">
+            <div class="stat-card">
+              <div class="stat-num">12</div>
+              <div class="stat-lbl">Trueques</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">4.3</div>
+              <div class="stat-lbl">Calificación</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">5</div>
+              <div class="stat-lbl">Ofertas activas</div>
+            </div>
+          </div>
+
+          <!-- Mis ofertas -->
+          <div class="section-title">MIS OFERTAS ACTIVAS</div>
+          <div class="offer-row">
+            <div class="offer-thumb">📱</div>
+            <div class="offer-info">
+              <div class="offer-title">Celular Xiaomi Redmi 10</div>
+              <div class="offer-cat">● PRODUCTO</div>
+            </div>
+            <div class="offer-status active">Activa</div>
+          </div>
+          <div class="offer-row">
+            <div class="offer-thumb">🎨</div>
+            <div class="offer-info">
+              <div class="offer-title">Clases de diseño gráfico</div>
+              <div class="offer-cat">● SERVICIO</div>
+            </div>
+            <div class="offer-status pending">Pendiente</div>
+          </div>
+
+          <!-- Mis trueques -->
+          <div class="section-title">MIS TRUEQUES RECIENTES</div>
+          <div class="trueque-row">
+            <div class="trueque-icon">🤝</div>
+            <div class="trueque-info">
+              <div class="trueque-title">Celular × Bicicleta</div>
+              <div class="trueque-date">Hace 3 días · con Carlos M.</div>
+            </div>
+            <div class="badge-status completado">✓</div>
+          </div>
+          <div class="trueque-row">
+            <div class="trueque-icon">⏳</div>
+            <div class="trueque-info">
+              <div class="trueque-title">Clases × Libro técnico</div>
+              <div class="trueque-date">Hace 1 día · con Laura P.</div>
+            </div>
+            <div class="badge-status evaluar">★ Evaluar</div>
+          </div>
+
+          <button class="edit-btn">✏ EDITAR PERFIL</button>
+          <button class="logout-btn">🚪 Cerrar sesión</button>
+
+        </div>
+
+        <!-- Tab Bar -->
+        <div class="tab-bar">
+          <div class="tab-item"><span>🏠</span>Inicio</div>
+          <div class="tab-item"><span>🔍</span>Explorar</div>
+          <div class="tab-center"><span>+</span></div>
+          <div class="tab-item"><span>💬</span>Chat</div>
+          <div class="tab-item active"><span>👤</span>Perfil</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card de elementos -->
+    <div class="elements-card">
+      <div class="card-title">COMPONENTES DE PERFIL</div>
+      <div class="el-item"><div class="el-dot"></div><div class="el-text"><strong>Avatar + nombre</strong> — Foto circular con iniciales y calificación promedio visible.</div></div>
+      <div class="el-item"><div class="el-dot"></div><div class="el-text"><strong>Estadísticas rápidas</strong> — Tarjetas con trueques realizados, calificación y ofertas activas.</div></div>
+      <div class="el-item"><div class="el-dot"></div><div class="el-text"><strong>Mis ofertas activas</strong> — Lista con ícono, título, categoría y estado.</div></div>
+      <div class="el-item"><div class="el-dot"></div><div class="el-text"><strong>Mis trueques recientes</strong> — Historial con estado visual: completado ✓ o pendiente de evaluar ★.</div></div>
+      <div class="el-item"><div class="el-dot"></div><div class="el-text"><strong>Botón Editar perfil</strong> — Actualiza foto y datos básicos.</div></div>
+      <div class="el-item"><div class="el-dot"></div><div class="el-text"><strong>Cerrar sesión</strong> — Siempre visible al final del menú.</div></div>
+      <div class="el-item"><div class="el-dot"></div><div class="el-text">⚠ Cédula y fecha de nacimiento <strong>nunca visibles</strong> — cumple Ley 1581/2012 (RNF04).</div></div>
+      <div class="el-item"><div class="el-dot"></div><div class="el-text">Requerimientos: <strong>RF03, RF08, RF12, RNF04</strong></div></div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

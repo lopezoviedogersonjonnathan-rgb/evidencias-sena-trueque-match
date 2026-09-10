@@ -1,0 +1,33 @@
+{
+  "Parqueadero_Central": [
+    {
+      "placa": "ABC-123",
+      "marca": "Toyota",
+      "modelo": "Corolla"
+    },
+    {
+      "placa": "XYZ-456",
+      "marca": "Chevrolet",
+      "modelo": "Spark"
+    },
+    {
+      "placa": "MNO-789",
+      "marca": "Yamaha",
+      "modelo": "FZ25"
+    },
+    {
+      "placa": "PQR-321",
+      "marca": "Renault",
+      "modelo": "Logan"
+    },
+    {
+      "placa": "DEF-654",
+      "marca": "Mazda",
+      "modelo": "CX-5"
+    },
+    {
+      "placa": "GHI-987",
+      "marca": "Ford",
+      "modelo": "Escape"}
+    ] 
+}

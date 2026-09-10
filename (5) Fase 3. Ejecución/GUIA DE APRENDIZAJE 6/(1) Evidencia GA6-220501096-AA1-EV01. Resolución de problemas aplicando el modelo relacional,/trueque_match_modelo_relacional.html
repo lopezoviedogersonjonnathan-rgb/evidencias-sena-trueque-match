@@ -1,0 +1,169 @@
+
+<style>
+#erd { width: 100%; overflow-x: auto; }
+#erd svg { max-width: 100%; }
+</style>
+<div id="erd" style="padding: 12px 0;"></div>
+<script type="module">
+import mermaid from 'https://esm.sh/mermaid@11/dist/mermaid.esm.min.mjs';
+const dark = matchMedia('(prefers-color-scheme: dark)').matches;
+await document.fonts.ready;
+mermaid.initialize({
+  startOnLoad: false,
+  theme: 'base',
+  fontFamily: '"Anthropic Sans", sans-serif',
+  themeVariables: {
+    darkMode: dark,
+    fontSize: '13px',
+    fontFamily: '"Anthropic Sans", sans-serif',
+    lineColor: dark ? '#9c9a92' : '#73726c',
+    textColor: dark ? '#c2c0b6' : '#3d3d3a',
+    primaryColor: dark ? '#2a2a2a' : '#f5f0eb',
+    primaryBorderColor: dark ? '#555' : '#c0392b',
+    primaryTextColor: dark ? '#c2c0b6' : '#1a1a1a',
+  },
+});
+
+const diagram = `erDiagram
+  TIPO_USUARIO {
+    INT id_tipo_usuario PK
+    VARCHAR nombre_tipo
+    TEXT descripcion
+    DATETIME fecha_creacion
+  }
+  USUARIO {
+    INT id_usuario PK
+    VARCHAR nombre
+    VARCHAR correo
+    VARCHAR clave_acceso
+    VARCHAR telefono
+    VARCHAR ciudad
+    VARCHAR foto_perfil
+    DECIMAL reputacion
+    DATETIME fecha_registro
+    TINYINT activo
+    INT id_tipo_usuario FK
+  }
+  ADMINISTRADOR {
+    INT id_admin PK
+    VARCHAR nombre
+    VARCHAR correo
+    VARCHAR clave_acceso
+    VARCHAR nivel_acceso
+    DATETIME fecha_registro
+    TINYINT activo
+  }
+  OFERTA {
+    INT id_oferta PK
+    VARCHAR titulo
+    TEXT descripcion
+    ENUM categoria
+    ENUM estado
+    VARCHAR imagen_url
+    VARCHAR ciudad
+    DECIMAL valor_estimado
+    DATETIME fecha_publicacion
+    INT id_usuario FK
+  }
+  TRUEQUE {
+    INT id_trueque PK
+    ENUM estado
+    DATETIME fecha_propuesta
+    DATETIME fecha_trueque
+    TEXT descripcion_acuerdo
+    INT id_usuario_propone FK
+    INT id_oferta_propone FK
+    INT id_usuario_recibe FK
+    INT id_oferta_recibe FK
+  }
+  EVALUACION {
+    INT id_evaluacion PK
+    INT puntaje
+    TEXT comentario
+    DATETIME fecha_evaluacion
+    INT id_usuario FK
+    INT id_trueque FK
+  }
+  SOLICITUD {
+    INT id_solicitud PK
+    TEXT mensaje
+    ENUM estado
+    DATETIME fecha_solicitud
+    DATETIME fecha_respuesta
+    INT id_usuario_solicita FK
+    INT id_usuario_recibe FK
+    INT id_oferta FK
+  }
+  NOTIFICACION {
+    INT id_notificacion PK
+    TEXT mensaje
+    ENUM tipo
+    TINYINT leida
+    DATETIME fecha_envio
+    INT id_usuario FK
+    INT id_trueque FK
+    INT id_oferta FK
+  }
+  REPORTE {
+    INT id_reporte PK
+    ENUM motivo
+    TEXT descripcion
+    ENUM estado
+    DATETIME fecha_reporte
+    DATETIME fecha_resolucion
+    INT id_usuario_reporta FK
+    INT id_usuario_reportado FK
+    INT id_oferta FK
+    INT id_trueque FK
+  }
+  USUARIO_OFERTA {
+    INT id_usuario PK
+    INT id_oferta PK
+    DATETIME fecha_guardado
+  }
+
+  TIPO_USUARIO ||--o{ USUARIO : "1:N clasifica"
+  USUARIO ||--o{ OFERTA : "1:N publica"
+  USUARIO ||--o{ TRUEQUE : "1:N propone"
+  USUARIO ||--o{ EVALUACION : "1:N realiza"
+  USUARIO ||--o{ SOLICITUD : "1:N envía"
+  USUARIO ||--o{ NOTIFICACION : "1:N recibe"
+  USUARIO ||--o{ REPORTE : "1:N genera"
+  OFERTA ||--o{ TRUEQUE : "1:N involucrada"
+  OFERTA ||--o{ SOLICITUD : "1:N recibe"
+  OFERTA ||--o{ NOTIFICACION : "1:N relacionada"
+  OFERTA ||--o{ REPORTE : "1:N reportada"
+  TRUEQUE ||--o{ EVALUACION : "1:N evaluado"
+  TRUEQUE ||--o{ NOTIFICACION : "1:N notifica"
+  TRUEQUE ||--o{ REPORTE : "1:N reportado"
+  USUARIO ||--o{ USUARIO_OFERTA : "N:M favoritos"
+  OFERTA ||--o{ USUARIO_OFERTA : "N:M favoritos"
+`;
+
+const { svg } = await mermaid.render('erd-svg', diagram);
+document.getElementById('erd').innerHTML = svg;
+
+document.querySelectorAll('#erd svg .node').forEach(node => {
+  const firstPath = node.querySelector('path[d]');
+  if (!firstPath) return;
+  const d = firstPath.getAttribute('d');
+  const nums = d.match(/-?[\d.]+/g)?.map(Number);
+  if (!nums || nums.length < 8) return;
+  const xs = [nums[0], nums[2], nums[4], nums[6]];
+  const ys = [nums[1], nums[3], nums[5], nums[7]];
+  const x = Math.min(...xs), y = Math.min(...ys);
+  const w = Math.max(...xs) - x, h = Math.max(...ys) - y;
+  const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+  rect.setAttribute('x', x); rect.setAttribute('y', y);
+  rect.setAttribute('width', w); rect.setAttribute('height', h);
+  rect.setAttribute('rx', '8');
+  for (const a of ['fill', 'stroke', 'stroke-width', 'class', 'style']) {
+    if (firstPath.hasAttribute(a)) rect.setAttribute(a, firstPath.getAttribute(a));
+  }
+  firstPath.replaceWith(rect);
+});
+
+document.querySelectorAll('#erd svg .row-rect-odd path, #erd svg .row-rect-even path').forEach(p => {
+  p.setAttribute('stroke', 'none');
+});
+</script>

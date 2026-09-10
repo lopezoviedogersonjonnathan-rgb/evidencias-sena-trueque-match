@@ -1,0 +1,14 @@
+{
+  "Parqueadero_Central": [
+    {
+      "placa": "ABC-123",
+      "marca": "Toyota",
+      "modelo": "Corolla"
+    },
+    {
+      "placa": "XYZ-456",
+      "marca": "Chevrolet",
+      "modelo": "Spark"
+    }
+  ]
+}

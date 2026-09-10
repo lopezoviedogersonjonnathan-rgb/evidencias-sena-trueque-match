@@ -1,0 +1,569 @@
+muy buenas tardes compañeros bienvenidos como les venía diciendo estos dos
+ejercicios que vamos a hacer o estas dos actividades que vamos a desarrollar esta semana son
+netamente prácticas son dos elementos independientes pero nos van a servir cuando
+ya vayamos a aplicarlos directamente en el proyecto que nosotros venimos trabajando
+la primera actividad de aprendizaje que vamos a trabajar esta semana en la g a 10 22 0 5 0 1 0
+97 doble a 5 evidencia 0 1 y habla sobre configuración de servicio base de datos y software en el
+equipo del cliente se que teniendo como en cuenta las características y particularidades del proceso
+de despliegue y servicio a través de lo que es la virtualización y de contenedores se debe
+revisar el proceso de configuración y despliegue utilizando virtualización y contenedores de
+una máquina con las siguientes características y miren que en este caso este ejercicio han
+focado un sistema operativo que de pronto algunos nunca trabajado algunos de pronto lo han
+escuchado otros ya lo han aplicado de pronto lo han manejado en su debido momento y es el
+sistema operativo linus y nos hablan de una versión en particular en este caso hablan de una
+versión de ubuntu en cualquier en cualquier año que se haya distribuido esa versión en este caso
+sabemos que las versiones que maneja linus algunas son en dos que son el lenguaje de código y la
+otra son versiones que son visuales conforme a lo que hace referencia windows como tal en este
+caso son muy similares a las que se utilizan en los windows entonces en este caso esta actividad
+de aprendizaje se centra en el montaje de ese sistema operativo que es linus también nos hablan
+de gestor de base de datos mysql y el servidor de aplicaciones apache que son los que hemos venido
+utilizando en las actividades que hemos trabajado con coverproyecto en este caso el proyecto que
+venimos trabajando está montado en ese gestor de base de datos y en ese servidor de aplicaciones que
+son mysql y apache como tal y estamos aplicando con la funcionalidad de sac entonces en este caso
+el ejercicio lo vamos a desarrollar aplicándolo en este sistema operativo linus y de gente que tenemos
+acá de pronto para algunos es nuevo nunca había escuchado ese sistema operativo de pronto si lo
+habían escuchado no lo habían prestado atención básicamente linus es una distribución que es
+completamente libre o gratuita nosotros podemos instalar linus sin necesidad de tener ningún
+licenciamiento es completamente gratuito así como las aplicaciones que se manejan directamente en
+linus que su tip pasa que linus maneja un paquete como el que manejamos nosotros en office que
+normalmente pago nosotros sabemos que si yo quiero una versión de office que sea legal debo
+comprar una licencia caso aparte pasa en linus yo puedo instalar linus y automáticamente me instala
+una distribución de un manejador o procesador de texto en el cual es completamente gratuito yo
+no tengo que comprar ninguna licencia automáticamente lo instalo empiezo a utilizar y básicamente es
+una de las distribuciones que me gusta porque es similar a la que se emplea dentro de la figura
+de windows como tal otras distribuciones que son bastante llamativas para el tema de linus
+aparece lo que cal y linus que es una distribución que se maneja básicamente en los procesos de
+hack o de hackeo es bastante utilizada cal y linus y hay otras cantidades de distribuciones pues
+que nosotros podemos encontrar entonces conforme a esta actividad nos están pidiendo que realicemos
+un informe donde se describa el paso a paso de los procesos realizados para la configuración de
+la máquina con las características anteriormente mencionadas cuáles son sistema operativo linus
+donde va a ser datos mayores secueles y el servidor de aplicaciones apache utilizando
+primero procesor virtualización y el celebrado de contenedores como tal no se lo pide realizar
+las imágenes descriptivas o capturas de pasta ahí el informe debe incluir alguna forma de
+probar los servicios de la máquina creada tienen los servicios ejecutándose actualmente entonces
+esta actividad se centra en tomarle los pantallas o las capturas de pantalla al proceso que nosotros
+vamos a desarrollar o estamos desarrollando conforme a montaje otra alternativa que les doy si así
+lo consideran es poder grabar el vídeo si yo digo bueno yo no quiero tomar unas capturas de
+pantalla salemos organizado y grabando el vídeo del proceso que voy a realizar magnífico y voy
+explicando cada uno de los pasos que voy desarrollando conforme al montaje del servicio que me están
+requiriendo se deben seguir las nuevas básicas de presentación de documento escrito es decir debe
+contener como mínimo la portada la introducción una conclusión y desarrollar actividad como
+otra entonces en eso consiste la primera actividad de aprendizaje vamos a hablar de la segunda y
+ahora resolvemos las la segunda actividad es la g a 10 22 0 5 0 1 0 97 doble a 6 evidencia 0 1 y habla
+sobre archivos cargados en la plataforma de distribución dice que teniendo como en cuenta
+las características de la plataforma que ofrecen los servicios de hosting y de dominio gratuito
+disponibles en internet seleccionemos una de nuestras preferencias hay muchas cada quien
+define cual utilizada conforme a cuál le guste cual sea más sencilla pues de todas formas hay
+muchas en la web que nosotros podemos utilizar y dice que debemos realizar el proceso a paso a
+paso para la configuración de cada servicio adicionalmente seleccionar una plantilla web
+gratuita y desarrollarla por él mismo entonces dentro del desarrollo de esta actividad para
+resumir todo ese texto que está allí básicamente nos están pidiendo que realicemos el proceso de
+montaje en un web service de una de las plantillas que nosotros escogamos ya sea que sea de las plantillas
+que nosotros hemos utilizado anteriormente para el ejercicio que estábamos trabajando o si de
+pronto me gustaría coger otra pues ya cada quien define de todas formas acá nuevamente nos están
+dando el enlace de la página en la cual nosotros encontramos las plantillas que podemos utilizar
+para hacer el ejercicio y ahí se los había mostrado pero hay otra en el web que nosotros
+podemos utilizar y podemos aplicar conforme el ejercicio entonces hay unos elementos para tener
+en cuenta inicialmente me piden que seleccionemos una plantilla que sea gratuita para desarrollar
+el ejercicio dice que debemos seleccionar una plataforma para que nos permita crear un dominio
+personalizado gratuito tenemos un tercer punto en el cual se selecciona la plataforma que
+permita realizar un hosting para una plantilla web o propia que sea publicada en internet y
+utiliza imágenes descriptivas o capturas de pantalla para desarrollar el documento y no olvide
+colocar el lugar o las puertas utilizadas en este caso para el último componente nos dice que debemos
+aplicar las nomas básicas de presentación de documento escrito entonces se debe contener
+conmigo la portada y los demás elementos que ya no son los conceptos entonces si se pueden dar
+cuenta estos dos componentes son prácticos el primero nos piden hacer un montaje o desarrollar
+los montajes en un sistema operativo linus y el segundo nos piden realizar un montaje de una
+plantilla en un web service o un servidor web que sea gratuito dudas preguntas compañeros hasta
+estamos claros ok perfecto magnífico que estemos claro entonces resulta
+ok compañero esteban me estaba diciendo que si es de pingüinitos y correcto es de pingüinitos
+una distribución que es gratuita es completamente gratuita todas las distribuciones que se aplican
+para linus y una de las ventas de linus pues aparte de que gratuitas sabemos que no tenemos que
+ir y comprar ningún elemento que necesitemos para utilizar ese sistema operativo como tal
+bien algunos me dirán pero es que yo tengo windows en mi computador y será que yo lo puedo
+desarrollar de esa forma si básicamente nosotros podemos instalar linus como segunda acción de
+sistema operativo o sea que podemos tener dos sistemas operativos en nuestro equipo una que
+sea windows o una que se haría algunos me dicen pero yo no quiero hacer eso no quiero que se me vaya
+a dañar mi computador o mi sistema operativo vamos a ver que nos dice el compañero esteban
+correcto si si lo instala de raíz linus tiene la particularidad que te deja montarlo
+como segunda acción de sistema operativo si es que en tu equipo al momento de arrancar te va a decir
+ok con qué sistema operativo quieres arrancar con windows o con linus o también cuando se va
+a instalar linus él te dice hey quieres que te borremos windows y que dejemos linus como
+sistema operativo dentro del equipo esa segunda acción también la da al momento de instalar y
+ya cada quien define con utilizar pero no se vayan a estresar no se vayan a completar con eso
+la idea es que lo podamos desarrollar de otra forma para que no veamos afectado el sistema
+operativo que tenemos montado nuestro equipo en este caso lo vamos a hacer a través de una
+máquina virtual de pronto algunos han escuchado a que hace referencia a la utilización de máquina
+virtual compañeros lo que están aquí si no tienen micrófono pueden escribir en el chat que
+ahí estoy leyendo los mensajitos ahorita algunos ha utilizado máquina virtual en algún momento
+o ha hecho un ejercicio con la introducción de máquina virtual
+ah ok perfecto compañero este en este caso para simular la utilización de windows 98
+magníficos si básicamente la máquina virtual me deja simular diferentes elementos ya sea
+sistemas operativos sea programas etcétera lo que yo necesite es emular o simular lo podemos
+aplicar a través de una máquina virtual en este caso vamos a trabajar o bueno voy a desarrollar
+el ejercicio a través de la utilización de virtual boss que es una máquina virtual que
+es gratuita y que es muy fácil de manejar e instalar yo me voy a la página de virtual y
+automáticamente me deja de cargar el ejecutable para instalar lo que es virtual entonces sería
+una de las herramientas que nosotros podríamos utilizar para desarrollar la actividad para que
+no nos compliquemos y no tengamos que instalar el inus en nuestro equipo y no se nos vaya
+a dañar nuestro sistema operativo de paso no vaya a generar ningún error y como nosotros con
+ese que trabajamos no se nos vaya a perder información entonces vamos a utilizar lo
+que es la herramienta virtual box pero antes de utilizar la herramienta en este caso virtual
+box debemos instalar la is o descargar la is o para ser más exato en este caso le voy a mostrar
+por acá permítanme un segundo aquí a la página si yo vengo miren cada esta la página de virtual
+box miren que es una versión de hora corta entonces si yo le descargar y automáticamente me
+descarga la plataforma de virtual solamente yo necesito instalar en este caso le doy
+descargar y luego le doy siguiente siguiente escogó la ubicación en la cual que no instala
+virtual si de pronto tengo dos discos duros o de pronto la que no instalar en una carpeta aparte
+o independiente escogó en ese momento la ubicación y finalizó el proceso allí ya he instalado lo que
+es virtual box la otra el otro elemento que nosotros debemos tener para desarrollo de la
+actividad compañeros que es una is como estamos hablando de lo que es
+un montaje en linus debemos descargar una is yo me imagino que ya nosotros conocemos a qué hace
+referencia en una iso básicamente es un archivo que me permite instalar el sistema operativo o una
+aplicación como tal en este caso si yo vengo acá y bueno vamos a ir a
+linus vamos a descargar ubuntu vamos acá a descargar ubuntu miren que le doy enta acá y
+ellos tengo las opciones para descargar directamente en la página de ubuntu lo puedo descargar miren
+que es una versión de escritor y acá puedo encontrar la arquitectura que necesito para mi
+dispositivo si es adm si es el procesador is el como tal la voy a descargar con esta arquitectura
+que es el que normalmente nosotros utilizamos por eso parece potencia en vez y si se pueden dar
+cuenta es el que más pes por los controladores que trae por todo el elemento o los componentes que
+trae entonces yo le doy descargar era automáticamente me empieza a descargar es completamente
+gratuito no tengo que pagar ningún centavo por descargar esa iso como tal lo mismo puedo
+hacer con windows cuando ustedes quieran formatar su equipo ustedes van a la página directamente de
+microsoft buscan la versión que quieren instalar o que quieren descargar y le buscan isos del
+sistema operativo sea windows 11 sea windows 10 sea windows 7 y que ustedes quieran lo mismo van a
+desarrollar con microsoft en el caso que necesiten en algún momento descargar una iso para instalar
+un sistema operativo de pronto para formatar su equipo entonces pueden hacerlo otra vez
+lógicamente esas versiones necesitan una un serial para poder terminar la instalación o comprar
+la licencia lo que son las temas de persona en algunos casos ya las personas le montan craps para
+que no tengan que cancelar pero eso ya es una cuestión ilegal por decirlo así entonces en este
+caso trabajando con linus no vamos a cancelar ningún centavo vamos a descargarlo se nos descarga
+el ejecutable y ya lo tenemos en nuestro equipo dudas preguntas hasta allí compañeros frente
+a lo que vamos a desarrollar estamos claros con lo que hemos hablado estáis cierto o si tienen alguna
+duda me me confirman por favor ok perfecto entonces ya sabemos que necesitamos dos herramientas virtual
+bus y la isos de punto como tal que fue lo que miramos anteriormente una vez nosotros tengamos
+instalada la máquina virtual o virtual bus lo vamos a ver de la siguiente forma ya le voy a proyectar
+por acá permita un segundo a cambiar en modo de proyección
+bien dijeron bueno ya nosotros instalamos virtual y automáticamente ustedes instalan virtual
+bus le sale de esta forma miren que es una versión de oracol se llama virtual bus y esta es modo
+administrador si ustedes dicen ah pero mire profe ya tiene una distribución del inus y yo hice
+montaje de la distribución para no demorando de todas formas es bastante sencillo básicamente le doy
+aquí el nuevo luego le colocó el nombre y pues me le quiera x si quieren colocarle el inus y quieren
+colocarle pruebas y quieren colocar la actividad en nombre que ustedes quieran y luego de eso vamos
+a venir acá y vamos a seleccionar la isos miren que yo puedo venir acá y acá tengo la isos que
+descargué de punto yo la selecciono y él automáticamente está para instalar allí ya he terminado esa isos
+de dice que no puedo instalarlo porque ya tengo una versión que tiene un nombre del inus como tal
+entonces por eso me no me deja terminar el proceso resulta y pasa que para terminar el proceso una vez
+ustedes seleccionen la isos le van a dar en terminar y le va a mostrar un cuadro de opciones cuál es
+cuadro de opciones que le va a mostrar el siguiente vamos acá a configuración y este cuadro de opciones
+que le va a mostrar en este caso aparece toda la información que va a utilizar esa distribución
+que nosotros estamos cargando en la máquina virtual cuál es el espacio de memoria que va a utilizar
+cuál es el almacenamiento que va a utilizar ustedes van a definir todos esos elementos conforme a
+las capacidades que tiene su computador si su computador tiene un ejemplo 500 giga terran
+y bueno yo quiero que mi sistema operativo de la máquina virtual utilice solamente
+300 o 250 gigas de almacenamiento y a ustedes lo definen conforme a las necesidades como este
+es el sitio bastante sencillo no necesitamos muchas características del equipo si se pueden dar
+cuenta mi equipo en la memoria tiene 32 32.738 megabytes hace referencia a 32 gigas de ran
+y yo le voy a decir bueno como tiene 32 le voy a decir que va a utilizar solamente 10 ahí está
+utilizando solamente 10.231 megabytes de lo que es la memoria o sea tengo una distribución que
+no le estoy dando toda la utilidad de la rang pero que va a trabajar perfectamente mi máquina
+virtual cómoda entonces hay ustedes una vez configuran esos elementos que son la memoria
+el disco ya tenemos instalada la máquina y le va a salir de esta forma miren que ya dice que tiene
+como nombre lino y que se encuentra a apagar yo la puedo iniciar en cualquier momento yo vengo y le
+voy a decir iniciar vamos a esperar que cargue y ya está empezando la arranque miren aca dice
+arrancando esperemos que arranque lo que es la máquina es importante compañeros definir que
+depende las capacidades del equipo pues lógicamente así va a arrancar entre más rápido sea el equipo
+las características que tiene el automáticamente va a arrancar más rápido allí ya arranco la
+distribución ya la montó en la máquina virtual y está corriendo como si nosotros la
+tuviéramos directamente en nuestro equipo te voy a decir que voy a iniciar sesión con este
+usuario al momento de yo montar esa máquina de linus él me preguntó una clave que quiero
+asignar la clave que asigné esta le doy ente y ahí arranque la máquina ahí la tengo listo entonces
+esta es la máquina virtual ya si yo quiero maximizar la ventana ustedes lo pueden hacer
+ya a cada quien define miren si le doy pantalla completa miren que ahí ya me parece pantalla
+completa vamos a darles que hay si se está viendo compañeros me confirma si se ve bien
+me confirman por favor
+pero si se ve
+ok gracias compañero este van por la recomendación lo que va a ser que virtual es bastante sencillo
+por eso la trabajamos en brista pero buena por la recomendación de entonces ya tenemos la
+máquina montada en este caso ya está corriendo si se pueden dar cuenta a castar menú todas las
+opciones que tiene y todos los elementos que nosotros podemos utilizar acá tengo buscador
+si yo quiero buscar como él está utilizando un ejemplo de bueno vamos a mirar algo aquí
+mercado libre como él está utilizando todos los elementos de mi computador miren acá está
+que tiene conexión está los dispositivos usb en este caso no hay ningún dispositivo prestado
+aparece en información de disco todos esos elementos están utilizándolo todos esos recursos
+lo está utilizando de mi computador o sea que está funcionando correctamente en este caso para la
+actividad número uno nos están pidiendo que montemos un sistema operativo en la versión
+del inus ubuntu y que montemos un actor de base datos maya secuelas y un servidor de aplicaciones
+apache en este caso los elementos que se utilizan para ese montaje vamos a utilizar san yo digo bueno
+como vamos a utilizar san para hacer el montaje yo voy a venir acá y voy a buscar
+le doy aquí en la página original de san y acá tengo toda la versión aparece la versión para
+windows aparece la versión para linus y aparece la versión para hoy y como tal los x que es el
+que manejan lo más en este caso le voy a dar clic en linus para descargar el montaje dentro del
+sistema operativo que estoy utilizando te le dan clic acá y descarga la versión que necesitamos que
+es la delis una vez se descargue vamos a mirar acá va a aparecer aquí en descarga miren que ya la
+tengo descargada aquí esta versión hasta aquí que es la versión de linus y la tenemos lista para
+realizar el montaje hasta ahí claros o tenemos alguna duda o pregunta de compañeros me confirma
+ok entiendo que entonces estamos claros no hay dudas ni preguntas bien necesitamos montar lo que
+es el manejador en este caso san si se pueden dar cuenta yo busco san y no lo tengo instalado
+miren que no aparece como lo va a instalar de la siguiente forma una vez yo descargo la versión
+de linus que la tengo aquí cuando la descargué estaba acá fuera y la voy a meter en una carpeta
+que se llama san aquí la tengo una vez yo la descargo voy a iniciar el proceso de instalación
+como lo instalo de la siguiente forma voy a iniciar una terminal miren que inició la terminal pero
+este inicio de la terminal tiene una particularidad si se pueden dar cuenta cuando la inicié estaba
+dentro de la carpeta que se llama san que es donde se encuentra ubicado el archivo que yo quiero
+instalar frente al desarrollo de la actividad en este caso para gestos de base de datos y para
+el servidor de aplicación hasta ahí es lo que me están pidiendo y es el proceso que estoy
+desarrollando si se pueden dar cuenta ya estoy en la ubicación de descarga y estoy en la
+carpeta que se llama sac hasta ahí estamos claro cómo desarrollo proceso de instalación de la
+siguiente forma inicialmente debo aplicar los permisos que necesito para el proceso en linus
+básicamente todos los procesos de instalación generalmente la gran mayoría lo hacemos a través
+de consola y esos permisos de esos procesos de instalación debe tener unos permisos que
+debemos ejecutar entonces voy a iniciar el proceso de asignación de permiso para que me deje
+instalar ese manejador de base de datos de base de datos y ese sector de aplicaciones como tal
+en este caso el comando que voy a utilizar es show te voy a aplicar el permiso para que me deje
+instalar que es el 755 para poder instalar la aplicación conforme a las necesidades dentro
+del disco duro que tengo dentro del sistema entonces hasta allí he definido el comando
+que me va a permitir instalar el san como tal luego de eso necesito definir el nombre como
+este nombre es un nombre bastante largo y complejo yo no voy a poner a mirar el nombre
+para el ahí está te voy a venir aquí en renombrar voy a copiar todo el nombre
+voy a copiar todo el nombre y luego me voy a venir acá y le voy a dar clic derecho pega y
+allí una vez lo pego le voy a dar ahí se definieron vamos a ver qué pasa
+nos está mostrando un error dentro del proceso de permisos revisemos que esté bien escrito el
+comando
+ok aquí hay un error de escritura vamos a revisar ese que no encontró ese comando y está mal
+escrito es show así ejecutamos y miren que ahí ya no nos mostró ningún error ya corrió sin
+problema si de pronto hubiera un error enseguida nos manda una serie de comandos pero hasta el
+momento se está corriendo de forma correcta ese permiso ahora le voy a decir que necesito
+instalar el san como tal como lo voy a instalar a través de un comando que es sudo que es el
+comando administrador yo voy a decir bueno sudo que el comando administrador voy a instalar
+voy a instalar
+san entonces vengo y pego nuevamente el nombre que acabo de copiar miren que aquí está
+y vamos a dar lentes para ver qué más
+le doy ente y miren que ya empezó el proceso en este caso me pide una partboard que es la
+password que definí para el usuario administrador que esa partboard la definí al momento de instalar
+el sistema operativo en este caso vultura y le defino la partboard y aparece el proceso de
+instar entonces vamos a darle siguiente ahí le está pidiendo que voy a instalarlo te voy a decir
+que siguiente necesito instalar san correto siguiente no entra en la computadora si y ahí
+empieza el proceso de instalación vamos a esperar que termine y ahí una vez termine ya yo puedo
+empezar a correr los servicios que estoy necesitando dentro del proceso de montaje de lo
+que es la plantilla ya sabemos que para montar la plantilla y para poder ejecutarla debemos
+hacerlo a través de que de la carpeta que se llama ht-dox ahí es donde vamos a cagar
+los los documentos o los archivos que me permite ejecutar a través del local más para que termine
+el proceso de instalación del san entras tanto voy a revisar si de planta más escritura ok me
+acompañará monica muy bien claro todo perfecto veremos un segundito dentro del proceso de instalación
+mientras tanto mientras se va terminando este proceso voy a venir acá a la actividad y nos
+están pidiendo nos están pidiendo que realicemos el actividad conforme a los requerimientos ya yo
+he montado el sistema operativo lo he cargado a través de la virtualización de la máquina
+virtual estoy instalando el sector de base de datos y estoy instalando el servidor de aplicaciones
+luego de eso nos piden que tomamos las cáctubes de pantalla y ahora estoy la opción de que
+pueden grabar un vídeo para realizar el proceso hasta allí son los elementos que me están
+pidiendo en este primer apartado de la actividad es importante que yo pueda verificar que se esté
+cumpliendo con los procesos o sea que se esté corriendo el local host y que yo pueda pueda
+visualizar los archivos que se encuentran dentro de la carpeta o el arrojamiento del ht2 que es la
+carpeta que maneja los archivos que nosotros queremos visualizar a través de lo que es el local
+host vamos a ver si ya terminó el proceso de instalación vamos a finalizar miren que ya está
+instalado el site si se vean cuenta que se ve diferente el que nosotros normalmente vemos a
+través de la sistema operativo windows pero miren que acá están las opciones de montaje en
+este caso está corriendo la pache yo puedo decir que puedo correr los demás servicios lo que es el
+el sector de base de datos si así lo considero y allí ya estoy corriendo los servicios esa sería
+los elementos claro como verificó ver si se está cumpliendo el desarrollo o si está corriendo de
+buena forma en la pache como tal yo puedo descargar una plantilla montarla en la carpeta del ht2 y
+correrla a través del local host ya nosotros conocemos las URL donde podemos descargar plantillas gratuitas
+aquí yo les voy a mostrar una que estuve indagando que me parece muy llamativa y que tiene algunos
+elementos importantes se llama html5.net miren que aquí está y aquí hay una cantidad de plantillas
+que nosotros podemos utilizar si así lo considero si de pronto me gusta alguna yo puedo utilizarla
+y aplicarla como proyecto ya están bien organizadas tienen todos los elementos que de pronto necesitamos
+a través de lo que es una plantilla web como tal sumogamos que yo voy a descargar esto yo solamente
+le doy aquí en descargar y él me descarga después marca twit bien una vez descargo la plantilla
+que ya se descargo aquí la tengo miren que la tengo aquí la idea es que la puedan llevar a la
+carpeta del ht2 donde está esa carpeta del ht2 vamos a abrir una nueva ventana
+esa carpeta tiene una ubicación en particular que de pronto si yo empiezo a buscarla no la
+voy a encontrar de forma fácil porque primero nosotros necesitamos ir a la opción de ubuntu luego
+a una carpeta que se llama opt partiendo de allí vamos a ir a la carpeta lang y por último
+vamos a ir al ht2 esa es el direccionamiento que yo necesito para ir a esa carpeta de lo que es el
+ht2 entonces este direccionamiento vamos a primero ir a ubuntu ubuntu partiendo de allí
+voy a ir ahora a opt
+luego de eso vamos a ir a lang
+luego de eso voy a ir al ht2
+pero y ente bueno ahí me está diciendo que hay un error vamos a ver donde está el error
+que no haya escrito algo ok vamos a quitarle los espacios ahí me estamos dando error por los espacios
+para ver si nos lleva directamente a la carpeta del ht2 no sigue teniendo inconvenientes
+ok dice ht2 somos así está bien escrito hay algún elemento que de pronto no esté definido
+ubuntu opt el lang y el ht2
+aquí tengo la habitación
+vamos a ir paso a paso a ver si ya se me deja
+está encontrando la carpeta del opt ese direccionamiento que quiero colocar básicamente
+el direccionamiento común en el cual uno en momento de instalar el sang va a esa ubicación
+como tal entonces allí ese error que me está mostrando vamos a ver ubuntu
+y
+estamos estando nos va a estar dejando y directamente a lo que es ese direccionamiento
+como está bloqueando
+el direccionamiento y básicamente lo que dice allí
+es que no se encuentra ese direccionamiento como tal en este caso es de ubuntu
+ok acá está vamos a ver
+normalmente el ubuntu luego necesito el opt aquí está opt
+del lang aquí está del lang y luego me voy a ir al del ht2 ahora sí me dejo
+esto aquí ya estoy en el direccionamiento del ht2 que es que me permite ejecutar los
+archivos que nosotros queremos ver a través de lo que es el servidor de apache si se pueden
+dar cuenta ya está bien la ubicación tengo un archivo que se llama plantilla en este caso
+que hice básicamente lo que hice fue lo siguiente me vine acá está esta archivo que tengo acá
+contiene todos los elementos que hacen referencia a la plantilla que acabo de descargar miren que
+tiene lindes que tiene imágenes que tiene otros elementos que son importantes para correr pero
+tiene un nombre que es bastante extenso si se pueden dar cuenta miren el nombre que tiene
+que hice básicamente lo que hice fue que le cambié el nombre y bueno vamos a cambiar
+el nombre este archivo lo renombré y le puedo colocar plantilla
+una vez lo tengo definido yo lo puedo correr acá miren qué pasa si lo corte vamos a hacer el
+ejercicio y yo digo bueno vamos a correrlo acá voy a cambiarla aquí le voy a poner plantilla
+1 para que veamos el ejercicio voy a renombrar y le voy a definir plantilla 1 ahí está y si yo
+vengo y lo corro ahora de la plantilla 1 a la plantilla del ht2 mire vamos a arrastrarlo
+no me está dejando arrastrar necesito minimizar esto necesito llevarlo aquí a la
+esquina y vamos a colocar está acá yo digo no va a arrastrar esto acá y miren que no nos deja
+si se dan cuenta que estoy llevándolo y no me está dejando aquí hay un inconveniente de
+permisos linus es un poco complejo en temas de seguridad no me deja trasladar el archivo así no
+más como nosotros lo hacemos en windows yo en windows que hago vengo y coger el archivo y lo llevo
+a la caferica o vengo y le digo a bueno yo solamente lo quiero portar miren que ahí le digo por tanto
+y si vengo acá le digo pegar no me sale la opción si se dan cuenta y le digo pegar y miren que
+automáticamente me dice que no es posible pegarlo en ese director y hay unos temas de
+seguridad que son importantes dentro del proceso de linus esto no lo puedo hacer de esa forma
+cómo lo hago de la siguiente forma necesito aplicarlo a través de un comando
+en este caso yo voy a decirle que voy a ir voy a cerrar esto porque ya no lo necesito
+voy a venir a acá donde tengo el archivo que quiero trasladar que es este
+y le voy a dar a abrir terminar entonces ya yo tengo que esa terminada abierta miren que está
+aquí y voy a utilizar el comando sudo sudo
+mv para mover el archivo que se llama como cómo se llama el archivo miren se llama plantilla 1.6
+entonces yo le voy a disminuir el archivo se llama plantilla
+1.6
+ahí lo tengo y le voy a decir que lo voy a mover a la siguiente o al siguiente direccionamiento
+cual es el direccionamiento que voy a utilizar o pte
+laan
+ht2
+ht2 ahí está direccionamiento en el cual quiero mover miren si se pueden dar cuenta de este
+direccionamiento que está aquí o pte laan ht2 le voy a dar enter me pide que me autentique le doy
+la clave principal que definí y me dice que no encuentra el directorio en este caso plantilla
+miren que está mal escrito si se dan cuenta dice partilla por eso no lo encontramos a corregirlo
+y vamos a definir plantilla le doy enter y ya automáticamente me corrió el archivo si se dan
+cuenta que ya no está aquí en la carpeta de descarga sino que ya automáticamente me la pasó a la
+carpeta del ht2 miren que lo estoy haciendo todo a través de consola no se puede hacer como lo
+hacemos en window tan fácil que cogemos la carpeta y la atrapto aquí lo moví a través de consola
+y aparece acá ahora voy a hacer la ejecución del archivo entonces yo vengo acá vamos a ejecutarlo
+a través del localhost y le voy a decirlo localhost se llama plantilla plantilla le doy enter miren
+que automáticamente ya me está corriendo el archivo que tengo montado en mi servidor de Apache
+acá está esa plantilla que acabó de descargar y que estoy visualizando sin ningún inconveniente
+ya estoy haciendo uso de esa plantilla y estoy cumpliendo con el ejercicio dudas preguntas
+compañeros hasta allí miren que de pronto ustedes lo ven algo pero cuando ya empiezan
+a hacerlo la primera vez ya es bastante sencillo una vez yo tengo los archivos que son de descarga de
+lo que es la máquina virtual y lo que es la hizo de sistema operativo ya básicamente lo voy a
+montar no me demoro mucho tiempo y luego hacia por el proceso de instalación de la máquina virtual y
+el montaje del archivo de los archivos a través de la carpeta localhost lo puedo tomar pantalla
+a su jugo le puedo tomar la natura de pantalla y lo voy documentando o si quiero puedo grabar el
+vídeo voy haciendo todas las clases dudas preguntas compañeros hasta allí hasta los que llevamos
+profe disculpe buenas tardes
+compañeros son no le escucho
+propias buenas tardes
+el problema mío o es que no me escucho
+se metan un segundo
+adelante compañero buenas tardes buenas tardes compañeros ahora sí te escucho
+fuerte el problema mío profe disculpe profe la clase cuando la sube mañana
+voy a ver si lo puedo subir ahora en la noche cuando termine otras sesiones que tengo para que
+la puedan ir desarrollando porque siempre me va a quitar un poquito de tiempo estas dos actividades
+porque son ejercicios prácticos vale vale profe te agradezco muchas gracias gracias lito
+lito compañero a eso bien hasta allí eso es lo que vamos a desarrollar para la primera actividad
+vamos a la segunda actividad
+la segunda actividad nos están pidiendo el despliegue de un web service como tal montando
+cualquier plantilla que me duerte que nosotros podamos descargar y que sea completamente gratuita
+y que encontremos en la web para montar un servidor web o un web service hay muchas
+opciones en la web que son gratuitas hay una opción que vengo utilizando hace mucho tiempo y que
+me ha funcionado que me ha funcionado se llama infinity free es una plataforma de hosting que
+me deja montar algunos episodios gratuitos paga también tiene unos elementos pago pero para
+hacer el ejercicio para desarrollar de la actividad gratuita y pues me sirven este proceso llama
+adelante cuando yo quiera montar programas o el software que quiero contar en la empresa ya
+pues ya quiero los servicios de web service que son pagos para que me funcionen todos los elementos
+que necesito y que esto acorde a las necesidades voy a venir acá y vamos a buscar infinity
+infinity free y aquí está me voy a dar aquí y que se llama hosting web service
+lógicamente yo me debo registrar a punto que no tengo ninguna cuenta creada en este sitio como
+tal para hacer uso de eso para registrarme básicamente me pide que puedo hacerlo con
+3 lb 1 por el correo de gmail 2 por el gfab para los que tienen gfab se pueden logear a través
+de gfab el otro es el correo entonces aquí si yo le doy poco correo me piden mi correo me pide
+casi una clave que la web va a confirmar que acepte los términos y que le de inicio al
+sesión ese son los elementos que yo normalmente necesito para poder iniciar sesión bueno ya
+ustedes vieron los elementos que piden para poder registrarse son bastante sencillos una vez
+ustedes arenzan los datos del correo y la contraseña o la clave le va a llegar un correo a su correo
+notificando la apertura de la cuenta ustedes deben confirmarla y automáticamente ya tienen
+acceso a la cuenta cuando tienen acceso a la cuenta básicamente ya falta es lo que hace vamos a
+suponer que yo me voy a logear y con un correo y digo que se llama sena alzo 2026
+alroba gmail.com y luego
+defino la clave que ya coloque a momento de registro e inicio
+listo entonces aquí ya tengo montado
+la plataforma de web set tengo diferentes elementos desde la creación de un sitio de
+0 yo aquí puedo utilizar algunos elementos que no prenda infinity free en este caso un sitio
+punto pro cuando yo accedo al sitio punto pro tiene una cantidad de plantillas que yo puedo
+utilizar para empezar a empezar a trabajar o ir modificando conforme a mis necesidades de
+pronto si yo quiero una página de venta yo aquí puedo encontrar algunos elementos que
+me son viables y que puedo utilizar resulta y pasa que yo no lo quiero hacer así yo me encontré
+una plantilla yo vine acá a la página que les dije que se llama se me escapó el nombre ahora
+mismo se llama html5 si no estoy mal html5u permítanme un segundo porque la clave escrita por aquí
+se llama html5u aquí está le doy enter y aquí tengo la opción de las plantillas estas
+plantillas ya vienen con todos los archivos que necesito y son editables según mi necesidad
+todas estas que están aquí las puedo utilizar bien yo digo bueno me gustó un ejemplo
+me gustó, me doy cliente descargar esperemos que descargue miren que ya descargo no pesa nada
+ya está ahí me voy a venir acá a infinity y voy a crear
+un domingo voy a crear un domingo en este caso ya yo he creado uno aquí yo le di crear
+cuenta nosotros podemos crear de una a tres cuentas máximo no puedo crear más de allí no me permite
+porque estoy utilizando la versión gratuita si yo quiero utilizar más cuenta ya tengo que pagar
+una versión que tiene diferentes elementos ya 2.5 dólares y así obviamente puedo utilizar la versión
+gratuita me dice que verifique que no soy un humano y le voy a colocar un nombre vamos a colocar la
+alzo 47 aquí tengo colocar cualquiera de las inspecciones que yo necesite o que están disponibles
+dentro del dominio voy a dejar esta que me dio con defecto y le voy a decir verificar acá yo puedo
+asignar una clave que es la que me permite la seguridad de la plataforma o del servicio que
+quiero montar la voy a dejar como está establecido miren que es una clave bastante compleja voy a
+tomarle una potico la puedo anotar como ustedes quieran y luego le voy a decir que creemos cuenta
+ok me está diciendo que necesito aprobar la utilización del email le voy a decir que sí que
+sea prueba y vamos a iniciar el proceso a esperar
+que termine de crear
+ok ahí ya me dijo que creo ese
+esa cuenta que se llama como acá la tengo miren alzo 47 si se dan cuenta ahora me voy a venir
+a cada opción de manager vamos a ver un momento en manager y aquí en manager ya yo puedo aplicar
+todos los elementos que me brinda y de panel de control que es donde yo puedo empezar a modificar
+todos los elementos de la página si de pronto yo quiero iniciar una página en blanco o si quiero
+empezar a desarrollar los elementos conforme a las herramientas que utiliza e infinity lo puedo
+hacer acá también tengo la opción de montaje de la base de datos miren si mi programa tiene base
+de datos lo puedo hacer a través de esta opción de base de data base y lo puedo establecer a través de
+bhp maya men si es maya secuel data beige o si tengo una base de datos remota todo depende
+las necesidades que hay de sus tipacias que ahora no me están pidiendo que monte una estructura de
+base de datos sino que monte una plantilla de un de una descarga que yo hice a través de la
+plataforma en este caso utilizando lo que es html 5 que fue la página que utilicé ya la tengo
+descargada miren que está y necesito hacer el montaje en el web service para poderlo visualizar
+desde cuesta parte como no voy a utilizar el panel ahora porque no necesito ninguno de estos
+elementos de base de datos otras cositas que puedo encontrar en el panel yo lo que voy a hacer es el
+cargue de el archivo que acabo de descargar voy a venir ahora aquí a manager y vamos a cargar
+los archivos que todos los archivos se van a cargar en la carpeta ht doc miren que no es
+san el único que utiliza esta estructura miren que acá también el infinity pero utiliza la carpeta
+que se llama ht doc y voy a cargar el archivo vamos a decirle que voy a cargar un archivo que se
+encuentra en la siguiente posición miren que se llama como html 5 y la plantilla se llama
+dimensión vamos a cargarla esperemos que termine de cargar cuando los archivos pesan se demora
+un poquito más ahorita no se demoró nada ya están cargados porque no pesan nada miren que
+están los elementos allí ya los he cargado estos modos voy a confirmar que los haya cargado bien
+listo si me dicen que los cargo bien vamos a mirar el porter y ya están dentro de la
+carpeta vamos a ver aquí está el archivo en este caso yo puedo darle a editar puedo descargar
+puedo darle a renombrar como ustedes consideren lo podemos aplicar entonces hasta allí he montado
+el servicio y ahorita puedo venir acá vamos a darle visualizar a ver cómo se ve
+ok me dice que la página no ha terminado de cargar esperemos que el cargue del servicio
+al actualizar el dominio
+allí ya parece activo el status pero no me está dando visualizar vamos a ver
+ha cargado el archivo de forma correcta vamos a hacer el proceso otra vez
+y
+estamos segundo carguemos el archivo aquí está ok vamos a descomprimirlo
+y ahí ya tenemos los archivos miren que en este caso el archivo que estamos manejando para la
+plantilla que acabamos de cargar es este indio punto html este indio ya estaba en la plataforma yo
+puedo hacer aquí lo puedo borrarse si lo considero lo voy a dejar ahí porque no lo voy a utilizar
+para nada vamos a actualizarlo nuevamente el servicio y vamos a cargar
+no está montando el servicio ahora ya la cargo entonces se pueden dar cuenta ya me está dejando
+visualizar la plantilla que acabo de montar en el web service que se llama dimensión si ustedes van
+acá a la carpetica donde descargamos miren que se llama la plantilla dimensión si yo ahora les digo
+bueno compañero vamos a hacer una prueba voy a coger les voy a copiar esta extensión y se la
+puede compartir quiero que ingresen a esa URL y me confirman si se está visualizando bien la página
+que acabo de montar o la plantilla que acabo de cargar en el web service me confirman por
+favor si se está visualizando de forma correcta
+ok perfecto entonces si yo ahora mismo si yo ahora mismo dijera bueno
+eso te pasa ah bien en este computador no tengo los archivos de proyecto que estoy trabajando por
+eso no te voy a mostrar si yo ahora mismo dijera bueno quiero cargar todos los archivos de mi
+proyecto lo puedo hacer básicamente me voy acá a infinity vengo al manager
+voy aquí al al cargue de archivos y yo puedo eliminar todos estos archivos yo puedo venir acá
+a eliminar todos estos archivos y decirle que me cargue un nuevo archivo si yo tuviera mi proyecto
+en este equipo básicamente comprimido yo lo puedo llamar lo puedo cargar y lo podemos visualizar
+hay algunas funciones que no me van a servir hasta que yo no monte la base de datos en el web
+service que es a través del panel de control yo vengo acá panel de control y una vez yo estén
+en el panel de control yo voy a decirle que necesito cargar una base de datos en que me va a salir
+de la misma forma de cómo lo hacemos en san yo digo bueno vamos a crear a cargar una base de
+datos y yo lo que hago es que monto ese archivo monto ese archivo y ya tengo la base de datos cada
+mire que acá ya tengo el manejador me está pidiendo que definar el usuario que definar la
+contraseña para poder trabajar en la base de datos ahora no tengo una base de datos dentro
+de este equipo ese ejercicio lo vamos a hacer en algún momento pero para que se den cuenta
+que ya yo puedo venir y cargar mi proyecto en el cual ser bico desde cualquier parte del mundo
+lo puedan visualizar lo mismo que estamos haciendo ahora con este ejercicio en el cual se está
+visualizando y se está trabajando de forma correcta dudas preguntas compañeros hasta ahí
+este segundo ejercicio un poquito más corto es bastante sencillo porque básicamente yo necesito
+poder y tener la plantilla y poder registrarme en el web service o en el servidor web para que pueda
+cargar esa plantilla y poderle dar los permisos a ese dominio para que me deje visualizar esa
+plantilla desde cualquier parte miren que ya el compañero 1 la probó le funcionó correcta y
+yo espero que los demás compañeros también hayan hecho la prueba y han identificado que
+le está funcionando de forma correcta la visualización de la plantilla que nosotros acabamos de cargar
+si de pronto me dicen a no es que esa plantilla no me gusta yo quiero otra plantilla un ejemplo y bueno
+me gusta esta plantilla descargar a esta tenemos el carguen miren que ahí ya descargo yo digo bueno
+vamos a cargar el servidor vamos a ir al manager y en el manager voy a hacer lo siguiente vamos a
+eliminar todos estos archivos que tengo aquí y le vamos a dar que eliminar estos archivos y que
+si entonces que pasa ahora si ustedes van a visualizar la plataforma que les dice compañeros
+yo vengo a que le voy a visualizar tienen que aparece que no hay ningún sitio montado entonces yo
+vengo a no es que me gustó otra plantilla básicamente le voy a venir acá vamos a
+seleccionar el archivo se llama lense esta plantilla la voy a cargar y la voy a descomprimir
+o extraer miren que ya se descomprimos vamos a actualizar el
+la el dominio vamos a la actualizar y vamos a ver qué sucede
+pero tengo aquí la tengo
+y voy a dar a actualizar a ver los de aquí y todavía me aparece está cargando el servicio
+vamos a esperar que termine de cargar
+tenemos que terminar de cargar está cargando el servicio
+intenten visualizarlo ustedes para ver cómo les sale compañeros
+y me cuento
+ya se les visualizó
+o todavía no los pueden visualizar
+voy a descargar aquí voy a venirme acá y vamos a darle aquí
+y
+está visualizando todavía no se visualiza el nuevo sitio me confirma
+y
+al lento los archivos de esa de esa plantilla aquí todavía está intentando cargarlo
+está la página en el alguno se le está visualizando
+queremos que alguno intente visualizarlo para ver si ya se los está dejando ver
+a mirar qué pasa
+ahí están los archivos están bien no hay problema están dentro del hd box
+aquí están
+vamos a hacer el cargue nuevamente y hacemos la prueba voy a borrar los dos no quedó ningún
+archivo voy a darle cargar un archivo sin se llama lens me voy a dar esto a ver
+ninguno lo ha probado compañeros me confirma si ya les dejo visualizar
+ahí ya se ha cargado
+no hay archivos centrar el
+vemos
+Este es esa plantilla como que tiene algo inconveniente porque miren que está demorando
+en cargar el servicio, ahí está intentando, pero no me está dejando visualizar, pueda
+hacer algo inconveniente a la plantilla, pero ahí ya con la plantilla inicial que tuvimos
+trabajando nos dimos cuenta que el servicio está cargado y se está visualizando de forma
+correcta.
+Ahora voy a estar actualizando nuevamente, que sucede, no sé si tiene alguna, ok, aparece
+una plantilla gris, bueno aquí la que descargamos fue correcta esta plantilla que tenemos acá,
+debería verse así, vamos a ver así como está aquí, pero ah ok, de pronto puede estar
+demorando en cargar porque esta plantilla tiene una cantidad de poticos aquí y eso
+es lo que de pronto está haciendo que el servicio se demoró un poco en cargar, puede
+estar ocurriendo ese tema y por eso no lo estoy dejando visualizar, mientras carga todos
+los elementos en el web service puede estar demorando un poco, entonces vamos a mirar las
+imágenes, miren que aquí están las imágenes, aquí están las imágenes que acabamos de
+visualizar, son todos esos elementos que están allí, posiblemente por eso se estén demorando
+un poco en visualizarse, pero básicamente es lo que vamos a desarrollar aquí, la idea
+es que lo podamos ir tomando esos pantallazos de cada uno de las opciones o de cada uno
+de los pasos que estamos siguiendo para poder realizar, miren que ya me parece que tengo
+dos cuentas activas de tres, no puedo visualizar una cuenta más porque lógicamente nos va
+a generar un error y ya no nos va a dejar visualizar esa cuenta que queremos cargar,
+entonces hay que tener pendiente de esos elementos ahí, no me está dejando todavía visualizar,
+quiero hacer la prueba, cambiando nuevamente la plantilla para ver si ese es el inconveniente,
+vamos a darle a eliminar, vamos a darle a encargar, extraer, vamos a hacer el señal
+de dimensión, ahí está terminando de extraer todos los elementos, ya los entra, voy a darle
+a actualizar y miremos a ver, ahí está, es un inconveniente la plantilla, miren que
+ya está automáticamente le doy, pero asumo que hace referencias por el peso de las fotos,
+como pesan varias y son varias, siempre se demora un poquito subir el servicio, posiblemente
+se sea el problema que está generando con la otra plantilla, miren que con dimensión
+si subió automáticamente termine de cargar, entonces eso es lo que vamos a desarrollar
+compañeros para esta semana, dos ejercicios prácticos, la primera es montaje de lo que
+es el sistema operativo Linux a través de la máquina virtual y el segundo es montaje
+de web service como tal a través de cualquier plataforma que nosotros consideremos, no solamente
+aparece infinity free, hay otras que son gratuitas y que a veces nos prestan el servicio infinity
+porque no molesta tanto para prestar el servicio, no pone tantos parámetros, no le pide la
+tarjeta si de pronto para iniciar la versión gratuita, por eso me gusta infinity, pero hay
+muchas que para iniciar la versión que es gratuita siempre te pide que coloquen la tarjeta de
+crédito, en un lanzo de tiempo tienes el acceso gratuito, una vez finalice eso entonces
+automáticamente empieza a hacer cobre, entonces por eso utilizo infinity free, si uno considera
+utilizar otra magnífico, la idea es que pueda documentarlo o si quiere grabar los videos
+del paso a paso sería ideal también, bueno compañeros no sé si hay alguna pregunta
+antes de finalizar o estamos claro con lo que vamos a desarrollar esta semana, compañeros.
+Ok, si estamos claros compañeros, entonces por el día de hoy vamos a dejar allí,
+vamos a esperar a ver qué nos dice el compañero, ok, perfecto, gracias compañero Juan,
+entonces compañeros por el día de hoy vamos a dejar allí, les agradezco a todos la presentación
+en esta sesión, cuídense a muchos compañeros, cuídense a sus familiares y a los penítrafos
+listantes para todos y muchas bendiciones, cualquier duda y conveniente quedó pendiente para colaborar,

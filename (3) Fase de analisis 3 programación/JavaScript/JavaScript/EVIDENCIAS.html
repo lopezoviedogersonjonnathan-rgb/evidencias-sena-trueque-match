@@ -1,0 +1,154 @@
+•	<!--<!DOCTYPE html>
+•	<html lang="es">
+•	<head>
+•	  <meta charset="UTF-8">
+•	  <title>Triángulo</title>
+•	</head>
+•	<body>
+•	  
+•	  <h1>Calculadora de Triángulo</h1>
+•	  <p>Abre la consola del navegador (F12) para ver los resultados</p>
+•	
+•	  <script>
+•	    // Función para calcular triángulo
+•	    function calcularTriangulo() {
+•	      
+•	      // Pedir datos al usuario
+•	      let a = parseFloat(prompt("Lado a:"));
+•	      let b = parseFloat(prompt("Lado b (base):"));
+•	      let c = parseFloat(prompt("Lado c:"));
+•	      let h = parseFloat(prompt("Altura h:"));
+•	
+•	      // Validar
+•	      if (isNaN(a) || isNaN(b) || isNaN(c) || isNaN(h)) {
+•	        console.log("Error: Datos inválidos");
+•	        return;
+•	      }
+•	
+•	      if (a <= 0 || b <= 0 || c <= 0 || h <= 0) {
+•	        console.log("Error: Los valores deben ser mayores que 0");
+•	        return;
+•	      }
+•	
+•	      // Calcular
+•	      let perimetro = a + b + c;
+•	      let area = (b * h) / 2;
+•	
+•	      // Mostrar en consola
+•	      console.log("=== TRIÁNGULO ===");
+•	      console.log("Perímetro: " + perimetro);
+•	      console.log("Área: " + area);
+•	    }
+•	
+•	    // Ejecutar
+•	    calcularTriangulo();
+•	  </script>
+•	
+•	</body>
+•	</html>-->
+
+
+
+<!--<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Triángulo</title>
+</head>
+<body>
+
+ <header>
+  <h1>Calculadora de Triángulo</h1>
+  <p>Abre la consola del navegador (F12) para ver los resultados</p>
+</header>
+  
+
+  <script>
+    // Función para calcular triángulo
+    function calcularTriangulo() {
+      
+      // Pedir datos al usuario
+      let a = parceFloat(prompt"Lado a:")
+      let b = parseFloat(prompt("Lado b (base):"));
+      let c = parseFloat(prompt("Lado c:"));
+      let h = parseFloat(prompt("Altura h:"));
+
+      // Validar
+      if (isNaN(a) || isNaN(b) || isNaN(c) || isNaN(h)) {
+        console.log("Error: Datos inválidos");
+        return;
+      }
+
+      if (a <= 0 || b <= 0 || c <= 0 || h <= 0) {
+        console.log("Error: Los valores deben ser mayores que 0");
+        return;
+      }
+
+      // Calcular
+      let perimetro = a + b + c;
+      let area = (b * h) / 2;
+
+      // Mostrar en consola
+      console.log("=== TRIÁNGULO ===");
+      console.log("Perímetro: " + perimetro);
+      console.log("Área: " + area);
+    }
+
+    // Ejecutar
+    calcularTriangulo();
+  </script>
+
+</body>
+</html>-->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cuadrado</title>
+</head>
+<body>
+  
+  <h1>Calculadora de Cuadrado</h1>
+  <p>Abre la consola del navegador (F12) para ver los resultados</p>
+
+  <script>
+    // Función para calcular cuadrado
+    function calcularCuadrado() {
+      
+      // Pedir dato al usuario (solo necesitamos un lado)
+      let a = parseFloat(prompt("Lado a del cuadrado:"));
+
+      // Validar que sea número
+      if (isNaN(a)) {
+        console.log("Error: Dato inválido");
+        return;
+      }
+
+      // Validar que sea positivo
+      if (a <= 0) {
+        console.log("Error: El valor debe ser mayor que 0");
+        return;
+      }
+
+      // Calcular perímetro: 4 x a
+      let perimetro = 4 * a;
+
+      // Calcular área: a²
+      let area = a * a;
+
+      // Mostrar en consola
+      console.log("=== CUADRADO ===");
+      console.log("Perímetro: " + perimetro);
+      console.log("Área: " + area);
+    }
+
+    // Ejecutar
+    calcularCuadrado();
+  </script>
+
+</body>
+</html>
+
+

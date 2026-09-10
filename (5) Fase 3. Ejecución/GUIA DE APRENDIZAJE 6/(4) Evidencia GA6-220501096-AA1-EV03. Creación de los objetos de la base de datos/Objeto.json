@@ -1,0 +1,31 @@
+[{"Placa": "ABC-123",
+ "Marca": "Toyota",
+ "Modelo": "Corolla",
+ "Color": "Blanco",
+ "Propietario": {
+    "Nombre": "Carlos Andres Pérez",
+    "Cedula": "1023456789",
+    "Telefono": "3101234567"
+ }
+},
+{"Placa": "XYZ-456",
+ "Marca": "Chevrolet",
+ "Modelo": "Spark",
+ "Color": "Rojo",
+ "Propietario": {
+    "Nombre": "Laura Milena Torres",
+    "Cedula": "1098765432",
+    "Telefono": "3209876543"
+ }
+},
+{"Placa": "MNO-789",
+ "Marca": "Yamaha",
+ "Modelo": "FZ25",
+ "Color": "Negro",
+  "Propietario": {
+      "Nombre": "Juan Esteban Gómez",
+      "Cedula": "1057894321",
+      "Telefono": "3153456789"
+  }
+}]
+  

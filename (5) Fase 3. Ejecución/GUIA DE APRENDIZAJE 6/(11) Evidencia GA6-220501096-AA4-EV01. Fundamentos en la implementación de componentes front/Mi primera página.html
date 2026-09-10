@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<!-- 
+  ============================================================
+  GA6-220501096-AA4-EV01 | Fundamentos Front-End
+  Autor: Gerson Jonnathan López Oviedo | Ficha: 3186647
+  Tema:  Tutorial - Los Caballeros del Zodiaco
+  ============================================================
+-->
+
+<!-- 
+  <!DOCTYPE html>
+  Le dice al navegador que este archivo sigue las reglas de HTML5.
+  SIEMPRE va en la primera línea de todo archivo HTML.
+-->
+
+<!-- 
+  <html lang="es">
+  Etiqueta padre de TODO el documento HTML.
+  El atributo lang="es" le indica al navegador que el idioma es español.
+  Esto ayuda a los lectores de pantalla y al SEO. (SEO significa Search Engine Optimization (Optimización para Motores de Búsqueda). En palabras simples: es el conjunto de trucos y reglas que usas al escribir tu código para que Google entienda de qué trata tu página y la ponga en los primeros lugares cuando alguien busca algo relacionado.)
+-->
+<html lang="es">
+
+<!-- 
+  ============================================================
+  <head> — SECCIÓN DE CABECERA
+  El usuario NO ve esta sección directamente.
+  Contiene configuraciones para el navegador: título,
+  codificación, fuentes externas y estilos CSS.
+  ============================================================
+-->
+<head>
+
+  <!-- 
+    <meta charset="UTF-8">
+    Le indica al navegador que use el conjunto de caracteres UTF-8.
+    Esto permite mostrar tildes (á, é), eñes (ñ) y emojis sin errores.
+  -->
+  <meta charset="UTF-8">
+
+  <!-- 
+    <meta name="viewport" ...>
+    Hace que la página sea RESPONSIVE (se adapte al tamaño del celular).
+    width=device-width : el ancho es igual al del dispositivo.
+    initial-scale=1.0  : sin zoom inicial.
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    <title>
+    El texto que aparece en la pestaña del navegador.
+    También lo usa Google en los resultados de búsqueda (SEO).
+  -->
+  <title>Los Caballeros del Zodiaco - Tutorial</title>
+
+  <!-- 
+    <link> — Carga una fuente de Google Fonts (CSS externo desde una URL).
+    rel="stylesheet" : indica que es una hoja de estilos.
+    href=""          : la URL donde está el archivo CSS de la fuente.
+    Cargamos dos fuentes:
+      - "Cinzel"       : fuente con estilo épico, para títulos.
+      - "Crimson Text" : fuente elegante con serifa, para el cuerpo.
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- 
+    ============================================================
+    <style> — HOJA DE ESTILO CSS INTERNA
+    Todo el CSS que controla la apariencia de la página va aquí.
+    Una regla CSS tiene esta estructura:
+       selector { propiedad: valor; }
+    ============================================================
+  -->
+  <style>
+
+    /* -------------------------------------------------------
+       :root — Variables CSS globales
+       Son como las constantes en JavaScript.
+       Definimos colores y fuentes aquí para reutilizarlos
+       en todo el documento. Para usarlas: var(--nombre-variable)
+    ------------------------------------------------------- */
+    :root {
+      --color-oro:        #D4AF37;   /* Dorado de las armaduras */
+      --color-oro-claro:  #F0D060;   /* Dorado más claro para brillos */
+      --color-cosmos:     #0A0A1A;   /* Azul noche profundo, fondo */
+      --color-cosmos2:    #10102A;   /* Fondo de las tarjetas */
+      --color-cosmos3:    #1A1A3A;   /* Hover de las tarjetas */
+      --color-texto:      #E8E0C8;   /* Blanco cálido para texto */
+      --color-texto2:     #A09880;   /* Gris dorado para textos secundarios */
+      --color-rojo:       #C0392B;   /* Rojo sangre para acentos */
+      --font-titulo:      'Cinzel', serif;       /* Fuente épica de títulos */
+      --font-cuerpo:      'Crimson Text', serif; /* Fuente de cuerpo */
+      --sombra-oro:       0 0 20px rgba(212, 175, 55, 0.4); /* Sombra dorada */
+    }
+
+    /* -------------------------------------------------------
+       * — Selector universal
+       Aplica a TODOS los elementos de la página.
+       box-sizing: border-box → el padding y el borde NO aumentan
+       el tamaño del elemento (es el comportamiento más intuitivo).
+       margin y padding en 0: elimina los espacios por defecto del navegador.
+    ------------------------------------------------------- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* -------------------------------------------------------
+       html — Elemento raíz
+       scroll-behavior: smooth → cuando haces clic en un enlace
+       interno (#ancla), la página baja suavemente en vez de
+       saltar bruscamente.
+    ------------------------------------------------------- */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* -------------------------------------------------------
+       body — El cuerpo de la página (todo lo visible)
+       Aquí definimos el fondo, la fuente general y el color de texto.
+    ------------------------------------------------------- */
+    body {
+      background-color: var(--color-cosmos);  /* Fondo azul noche */
+      color: var(--color-texto);               /* Color de texto general */
+      font-family: var(--font-cuerpo);         /* Fuente general */
+      font-size: 18px;                         /* Tamaño base del texto */
+      line-height: 1.7;                        /* Espaciado entre líneas (comodidad de lectura) */
+
+      /* 
+        background-image: radial-gradient(...)
+        Crea un fondo con gradiente radial que simula un cosmos.
+        El primer color es el más brillante en el centro,
+        el segundo se extiende hacia los bordes.
+      */
+      background-image:
+        radial-gradient(ellipse at 20% 30%, rgba(30, 30, 80, 0.8) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 70%, rgba(60, 20, 20, 0.4) 0%, transparent 50%);
+
+      /* overflow-x: hidden → evita que elementos muy anchos
+         creen una barra de desplazamiento horizontal. */
+      overflow-x: hidden;
+    }
+
+    /* -------------------------------------------------------
+       ANIMACIONES con @keyframes
+       Son como "recetas" de movimiento que luego asignamos
+       a elementos con animation: nombre duración timing;
+    ------------------------------------------------------- */
+
+    /* fadeInDown → el elemento aparece cayendo desde arriba */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;           /* Invisible al inicio */
+        transform: translateY(-40px); /* 40px más arriba de su posición final */
+      }
+      to {
+        opacity: 1;           /* Totalmente visible */
+        transform: translateY(0); /* En su posición original */
+      }
+    }
+
+    /* fadeInUp → el elemento aparece subiendo desde abajo */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* pulso → efecto de brillo pulsante (para el header) */
+    @keyframes pulso {
+      0%, 100% { text-shadow: 0 0 10px var(--color-oro), 0 0 30px rgba(212,175,55,0.3); }
+      50%       { text-shadow: 0 0 20px var(--color-oro), 0 0 60px rgba(212,175,55,0.6), 0 0 80px rgba(212,175,55,0.3); }
+    }
+
+    /* estrellas → hace que los pseudo-elementos de fondo se desplacen */
+    @keyframes estrellas {
+      from { background-position: 0 0; }
+      to   { background-position: 0 -500px; }
+    }
+
+    /* brillar → rotación infinita para el símbolo del header */
+    @keyframes brillar {
+      0%   { transform: rotate(0deg) scale(1); }
+      50%  { transform: rotate(180deg) scale(1.1); }
+      100% { transform: rotate(360deg) scale(1); }
+    }
+
+    /* -------------------------------------------------------
+       HEADER — Encabezado principal de la página
+       position: relative → permite posicionar pseudo-elementos
+       dentro de él usando position: absolute.
+    ------------------------------------------------------- */
+    header {
+      position: relative;
+      text-align: center;   /* Centra todo el texto */
+      padding: 80px 20px 60px; /* padding: arriba derecha-izquierda abajo */
+      overflow: hidden;     /* Oculta lo que salga del header */
+
+      /* Borde inferior dorado con gradiente */
+      border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+
+      /* Fondo del header: degradado de arriba hacia abajo */
+      background: linear-gradient(180deg,
+        rgba(20, 10, 40, 0.95) 0%,
+        rgba(10, 10, 26, 0.8) 100%);
+    }
+
+    /* 
+      header::before — Pseudo-elemento (capa decorativa)
+      No es una etiqueta HTML real, es una capa virtual creada
+      con CSS. Aquí la usamos para crear un fondo con estrellas.
+      content: "" → obligatorio para que aparezca el pseudo-elemento.
+    */
+    header::before {
+      content: "";
+      position: absolute; /* Se posiciona respecto al header */
+      top: 0; left: 0; right: 0; bottom: 0; /* Cubre TODO el header */
+      /* 
+        Creamos un patrón de puntos blancos diminutos (estrellas)
+        con radial-gradient. Se repite por todo el fondo.
+      */
+      background-image:
+        radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.8) 0%, transparent 100%),
+        radial-gradient(1px 1px at 30% 60%, rgba(255,255,255,0.6) 0%, transparent 100%),
+        radial-gradient(2px 2px at 50% 15%, rgba(212,175,55,0.9) 0%, transparent 100%),
+        radial-gradient(1px 1px at 70% 80%, rgba(255,255,255,0.7) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 40%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1px 1px at 15% 90%, rgba(255,255,255,0.6) 0%, transparent 100%),
+        radial-gradient(2px 2px at 80% 10%, rgba(212,175,55,0.7) 0%, transparent 100%);
+      background-size: 300px 300px; /* Tamaño del patrón que se repite */
+      animation: estrellas 20s linear infinite; /* Animación de movimiento */
+      pointer-events: none; /* No interfiere con clics del usuario */
+      z-index: 0; /* Queda detrás del contenido del header */
+    }
+
+    /* El símbolo de Athena en el header */
+    .header-simbolo {
+      font-size: 60px;  /* Tamaño del emoji/símbolo */
+      display: block;   /* Ocupa su propia línea */
+      margin-bottom: 20px;
+      animation: brillar 8s linear infinite; /* Rotación suave infinita */
+      position: relative;
+      z-index: 1; /* Queda encima del pseudo-elemento de estrellas */
+    }
+
+    /* -------------------------------------------------------
+       h1 — Título principal de la página
+    ------------------------------------------------------- */
+    h1 {
+      font-family: var(--font-titulo); /* Fuente épica Cinzel */
+      font-size: clamp(2rem, 6vw, 4.5rem);
+      /* clamp(mínimo, preferido, máximo) → tamaño fluido y responsive */
+
+      font-weight: 900;    /* Máximo grosor */
+      letter-spacing: 6px; /* Espaciado entre letras (elegancia) */
+      text-transform: uppercase; /* Fuerza mayúsculas */
+      line-height: 1.1;
+
+      /* Gradiente aplicado al TEXTO (no al fondo) */
+      background: linear-gradient(135deg, var(--color-oro-claro) 0%, var(--color-oro) 50%, #A07820 100%);
+      /* Las siguientes 3 propiedades hacen que el gradiente se vea en el texto: */
+      -webkit-background-clip: text;  /* Para Chrome/Safari */
+      background-clip: text;
+      -webkit-text-fill-color: transparent; /* El texto se vuelve "transparente" para revelar el gradiente */
+
+      animation: pulso 3s ease-in-out infinite; /* Efecto de brillo pulsante */
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Subtítulo del header */
+    .subtitulo-header {
+      font-size: 1.1rem;
+      color: var(--color-texto2);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-top: 15px;
+      font-style: italic;
+      position: relative;
+      z-index: 1;
+      animation: fadeInDown 1s ease 0.5s both; /* 0.5s de retraso */
+    }
+
+    /* Línea decorativa dorada debajo del título */
+    .linea-dorada {
+      width: 200px;        /* Ancho fijo */
+      height: 2px;         /* Altura (grosor de la línea) */
+      margin: 20px auto;   /* auto en lados = centrado horizontal */
+      /* Gradiente horizontal en la línea */
+      background: linear-gradient(90deg, transparent, var(--color-oro), transparent);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* -------------------------------------------------------
+       NAV — Barra de navegación
+       Contiene el índice con enlaces a cada sección.
+    ------------------------------------------------------- */
+    nav {
+      background: rgba(10, 10, 26, 0.95);  /* Fondo semi-transparente */
+      border-top: 1px solid rgba(212,175,55,0.2);
+      border-bottom: 1px solid rgba(212,175,55,0.2);
+      padding: 15px 20px;
+      position: sticky; /* Se "pega" al top cuando haces scroll */
+      top: 0;           /* Pegado en la parte superior de la pantalla */
+      z-index: 100;     /* z-index alto para que quede encima de todo */
+      text-align: center;
+    }
+
+    /* Etiqueta de texto dentro del nav */
+    .nav-label {
+      font-family: var(--font-titulo);
+      font-size: 0.7rem;
+      letter-spacing: 4px;
+      color: var(--color-oro);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    /* -------------------------------------------------------
+       ol — Lista ORDENADA (numbered list)
+       Usada para el índice de navegación.
+       list-style: none → elimina los números predeterminados.
+       display: flex → los ítems se colocan en fila horizontal.
+       flex-wrap: wrap → si no caben, saltan a la siguiente línea.
+    ------------------------------------------------------- */
+    nav ol {
+      list-style: none;    /* Sin números ni viñetas */
+      display: flex;       /* Diseño flexbox: ítems en fila */
+      flex-wrap: wrap;     /* Si no caben en una fila, saltan */
+      justify-content: center; /* Centra los ítems horizontalmente */
+      gap: 10px;           /* Espacio entre cada ítem */
+      padding: 0;
+      counter-reset: indice; /* Reinicia el contador CSS personalizado */
+    }
+
+    /* Cada <li> del índice */
+    nav ol li {
+      counter-increment: indice; /* Incrementa el contador en cada li */
+    }
+
+    /* 
+      El enlace de cada ítem del índice.
+      display: flex → para alinear el número y el texto.
+    */
+    nav ol li a {
+      display: flex;
+      align-items: center;   /* Centra verticalmente número y texto */
+      gap: 6px;
+      color: var(--color-texto2);
+      text-decoration: none; /* Sin subrayado */
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      padding: 6px 14px;
+      border: 1px solid rgba(212,175,55,0.2); /* Borde sutil */
+      border-radius: 2px;
+      transition: all 0.3s ease; /* Transición suave en hover */
+      font-family: var(--font-titulo);
+      text-transform: uppercase;
+    }
+
+    /* 
+      nav ol li a::before — Pseudo-elemento para el número
+      Mostramos el contador CSS como un número personalizado.
+      content: counter(indice) → muestra el valor del contador.
+    */
+    nav ol li a::before {
+      content: counter(indice, decimal-leading-zero); /* 01, 02, 03... */
+      color: var(--color-oro);
+      font-size: 0.7rem;
+      font-weight: 700;
+    }
+
+    /* 
+      :hover — Estado cuando el cursor está encima del elemento.
+      La transición definida arriba hace el cambio suave.
+    */
+    nav ol li a:hover {
+      color: var(--color-oro);
+      background: rgba(212,175,55,0.1);
+      border-color: var(--color-oro);
+      box-shadow: var(--sombra-oro); /* Sombra dorada */
+    }
+
+    /* -------------------------------------------------------
+       CONTENIDO PRINCIPAL
+       main — Contenedor principal del contenido.
+       max-width → el contenido no se extiende más de 1100px.
+       margin: 0 auto → centra el contenido horizontalmente.
+    ------------------------------------------------------- */
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    /* -------------------------------------------------------
+       INTRODUCCIÓN — Sección de bienvenida
+    ------------------------------------------------------- */
+    .intro {
+      text-align: center;
+      padding: 40px;
+      margin-bottom: 70px;
+      position: relative;
+
+      /* Borde con gradiente simulado usando outline + before */
+      border: 1px solid rgba(212,175,55,0.3);
+      border-radius: 4px;
+      background: rgba(212,175,55,0.03); /* Fondo muy sutil */
+      animation: fadeInUp 1s ease 0.3s both; /* Animación de entrada */
+    }
+
+    .intro h2 {
+      font-family: var(--font-titulo);
+      font-size: 1.3rem;
+      color: var(--color-oro);
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .intro p {
+      font-size: 1.2rem;
+      max-width: 700px; /* Limita el ancho para mejor legibilidad */
+      margin: 0 auto;
+      color: var(--color-texto2);
+      line-height: 1.9;
+    }
+
+    /* -------------------------------------------------------
+       SECCIÓN DE CADA CABALLERO
+       section — Cada tema del tutorial tiene su propia sección.
+    ------------------------------------------------------- */
+    section {
+      margin-bottom: 80px;
+      animation: fadeInUp 0.8s ease both;
+    }
+
+    /* 
+      Delay escalonado (staggered) para las secciones.
+      Cada sección aparece un poco después que la anterior.
+    */
+    section:nth-child(1) { animation-delay: 0.1s; }
+    section:nth-child(2) { animation-delay: 0.2s; }
+    section:nth-child(3) { animation-delay: 0.3s; }
+    section:nth-child(4) { animation-delay: 0.4s; }
+    section:nth-child(5) { animation-delay: 0.5s; }
+
+    /* -------------------------------------------------------
+       h2 — Títulos de cada sección (nombre del caballero)
+    ------------------------------------------------------- */
+    h2 {
+      font-family: var(--font-titulo);
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: var(--color-oro);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      padding-bottom: 12px;
+
+      /* Línea inferior con gradiente (usando border-image) */
+      border-bottom: 2px solid transparent;
+      border-image: linear-gradient(90deg, var(--color-oro), transparent) 1;
+
+      display: flex;         /* Icono + texto en línea */
+      align-items: center;
+      gap: 15px;
+    }
+
+    /* Número del ítem antes del título de sección */
+    .num-seccion {
+      font-size: 0.7em;
+      color: rgba(212,175,55,0.4);
+      font-weight: 400;
+    }
+
+    /* -------------------------------------------------------
+       TARJETA DEL CABALLERO
+       Contiene la imagen y la información de cada caballero.
+       display: grid → diseño de cuadrícula.
+       grid-template-columns: 1fr 2fr → columna imagen (1 parte)
+       + columna texto (2 partes).
+    ------------------------------------------------------- */
+    .card-caballero {
+      display: grid;
+      grid-template-columns: 280px 1fr; /* Imagen fija + texto flexible */
+      gap: 0;                           /* Sin espacio entre columnas */
+      background: var(--color-cosmos2); /* Fondo oscuro */
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: 4px;
+      overflow: hidden; /* Recorta lo que salga de los bordes */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* 
+      :hover en la tarjeta → efecto de elevación.
+      translateY(-5px) sube la tarjeta 5px al pasar el cursor.
+    */
+    .card-caballero:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(212,175,55,0.15), 0 5px 15px rgba(0,0,0,0.5);
+      background: var(--color-cosmos3);
+    }
+
+    /* -------------------------------------------------------
+       CONTENEDOR DE LA IMAGEN
+    ------------------------------------------------------- */
+    .card-imagen {
+      position: relative;
+      overflow: hidden; /* Recorta la imagen si desborda */
+      min-height: 300px;
+    }
+
+    /* 
+      img — La imagen del caballero.
+      width: 100% → ocupa todo el ancho del contenedor.
+      height: 100% → ocupa toda la altura del contenedor.
+      object-fit: cover → la imagen se recorta para llenar el espacio
+      sin deformarse (como "background-size: cover").
+    */
+    .card-imagen img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block; /* Elimina el espacio blanco debajo de la imagen */
+      transition: transform 0.5s ease; /* Transición para el zoom */
+      filter: saturate(0.8) contrast(1.1); /* Leve desaturación */
+    }
+
+    /* Zoom suave en la imagen al hacer hover en la tarjeta */
+    .card-caballero:hover .card-imagen img {
+      transform: scale(1.05); /* Agranda 5% la imagen */
+    }
+
+    /* Superposición oscura sobre la imagen (degradado) */
+    .card-imagen::after {
+      content: "";
+      position: absolute;
+      inset: 0; /* Equivale a: top:0; right:0; bottom:0; left:0 */
+      background: linear-gradient(90deg, transparent 70%, var(--color-cosmos2) 100%);
+      pointer-events: none; /* No bloquea clics */
+    }
+
+    /* Badge con el rango/signo zodiacal sobre la imagen */
+    .badge-signo {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: rgba(0,0,0,0.85);
+      border: 1px solid var(--color-oro);
+      color: var(--color-oro);
+      font-family: var(--font-titulo);
+      font-size: 0.65rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      z-index: 2; /* Queda sobre la imagen */
+    }
+
+    /* -------------------------------------------------------
+       CONTENIDO DE TEXTO DE LA TARJETA
+    ------------------------------------------------------- */
+    .card-contenido {
+      padding: 35px 40px;
+      display: flex;
+      flex-direction: column; /* Apilar elementos verticalmente */
+      justify-content: center;
+    }
+
+    /* El nombre del caballero dentro de la tarjeta */
+    .card-nombre {
+      font-family: var(--font-titulo);
+      font-size: 1.5rem;
+      color: var(--color-oro-claro);
+      letter-spacing: 3px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    /* Subtítulo: nombre de la armadura */
+    .card-armadura {
+      font-size: 0.85rem;
+      color: var(--color-rojo);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      font-family: var(--font-titulo);
+    }
+
+    /* Línea separadora dentro de la tarjeta */
+    .card-divider {
+      width: 60px;
+      height: 1px;
+      background: var(--color-oro);
+      margin-bottom: 20px;
+    }
+
+    /* Texto descriptivo del caballero */
+    .card-descripcion {
+      color: var(--color-texto2);
+      line-height: 1.8;
+      font-size: 1.05rem;
+      margin-bottom: 20px;
+    }
+
+    /* -------------------------------------------------------
+       ul — Lista NO ordenada dentro de las tarjetas.
+       Usada para las habilidades/técnicas del caballero.
+    ------------------------------------------------------- */
+    .card-habilidades {
+      list-style: none; /* Sin viñetas predeterminadas */
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    /* Cada habilidad de la lista */
+    .card-habilidades li {
+      font-size: 0.9rem;
+      color: var(--color-texto);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(212,175,55,0.08); /* Línea divisoria muy sutil */
+    }
+
+    /* Icono/viñeta personalizada antes de cada habilidad */
+    .card-habilidades li::before {
+      content: "◆";   /* Símbolo de rombo como viñeta */
+      color: var(--color-oro);
+      font-size: 0.5rem;
+      margin-top: 5px;
+      flex-shrink: 0; /* El símbolo no se encoje */
+    }
+
+    /* Nombre de la técnica en negrita */
+    .card-habilidades li strong {
+      color: var(--color-oro-claro);
+      font-weight: 600;
+    }
+
+    /* -------------------------------------------------------
+       SECCIÓN DEL COSMOS — Explicación del "Cosmo"
+    ------------------------------------------------------- */
+    .cosmos-section {
+      background: var(--color-cosmos2);
+      border: 1px solid rgba(212,175,55,0.2);
+      padding: 50px 40px;
+      margin-bottom: 80px;
+      position: relative;
+      overflow: hidden;
+      animation: fadeInUp 0.8s ease 0.6s both;
+    }
+
+    /* Elemento decorativo de fondo en la sección cosmos */
+    .cosmos-section::before {
+      content: "☯";         /* Símbolo decorativo */
+      position: absolute;
+      font-size: 300px;
+      color: rgba(212,175,55,0.03); /* Muy transparente */
+      right: -50px;
+      top: -50px;
+      pointer-events: none;
+      line-height: 1;
+    }
+
+    /* Cuadrícula de niveles del Cosmos */
+    .cosmos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      /* auto-fit: crea tantas columnas como quepan */
+      /* minmax(200px, 1fr): cada columna tiene entre 200px y 1 fracción */
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    /* Cada ítem/nivel de poder */
+    .cosmos-item {
+      background: rgba(212,175,55,0.05);
+      border: 1px solid rgba(212,175,55,0.2);
+      padding: 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .cosmos-item:hover {
+      background: rgba(212,175,55,0.1);
+      border-color: var(--color-oro);
+      box-shadow: var(--sombra-oro);
+    }
+
+    /* Número/rango del nivel de cosmos */
+    .cosmos-nivel {
+      font-family: var(--font-titulo);
+      font-size: 2rem;
+      color: var(--color-oro);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .cosmos-titulo {
+      font-family: var(--font-titulo);
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      color: var(--color-texto);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .cosmos-desc {
+      font-size: 0.85rem;
+      color: var(--color-texto2);
+    }
+
+    /* -------------------------------------------------------
+       FOOTER — Pie de página
+    ------------------------------------------------------- */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid rgba(212,175,55,0.2);
+      background: rgba(10, 10, 26, 0.8);
+    }
+
+    .footer-logo {
+      font-size: 40px;
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    .footer-texto {
+      font-family: var(--font-titulo);
+      font-size: 0.75rem;
+      letter-spacing: 3px;
+      color: var(--color-texto2);
+      text-transform: uppercase;
+    }
+
+    .footer-sena {
+      font-size: 0.8rem;
+      color: rgba(212,175,55,0.5);
+      margin-top: 10px;
+      letter-spacing: 2px;
+    }
+
+    /* -------------------------------------------------------
+       RESPONSIVE — Media Queries
+       @media (max-width: 700px) → reglas que se aplican SOLO
+       cuando la pantalla tiene 700px o menos de ancho (celular).
+    ------------------------------------------------------- */
+    @media (max-width: 700px) {
+
+      /* En celular, la tarjeta cambia de columnas a filas */
+      .card-caballero {
+        grid-template-columns: 1fr; /* Una sola columna */
+      }
+
+      /* La imagen tiene altura fija en celular */
+      .card-imagen {
+        min-height: 220px;
+      }
+
+      /* El degradado cambia a vertical en celular */
+      .card-imagen::after {
+        background: linear-gradient(180deg, transparent 60%, var(--color-cosmos2) 100%);
+      }
+
+      /* Menos padding en celular */
+      .card-contenido {
+        padding: 25px 20px;
+      }
+
+      /* El nav se vuelve más compacto */
+      nav ol {
+        gap: 6px;
+      }
+
+      nav ol li a {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+      }
+
+      /* Menos padding general en celular */
+      main {
+        padding: 40px 15px;
+      }
+
+      .cosmos-section {
+        padding: 30px 20px;
+      }
+    }
+
+  </style>
+  <!-- Fin de la sección <style> y de <head> -->
+</head>
+
+<!-- 
+  ============================================================
+  <body> — CUERPO DE LA PÁGINA
+  Todo lo que el usuario ve está aquí.
+  ============================================================
+-->
+<body>
+
+  <!-- ======================================================
+    <header> — Encabezado principal
+    Contiene el título y subtítulo de la página.
+  ====================================================== -->
+  <header>
+
+    <!-- span con una clase para el símbolo decorativo -->
+    <span class="header-simbolo" aria-hidden="true">⚡</span>
+    <!-- aria-hidden="true" → oculta el símbolo a los lectores de pantalla
+         ya que es puramente decorativo. -->
+
+    <!-- 
+      <h1> — Encabezado de nivel 1
+      Solo debe haber UN h1 por página (el título principal).
+    -->
+    <h1>Los Caballeros del Zodiaco</h1>
+
+    <!-- Línea decorativa dorada -->
+    <div class="linea-dorada"></div>
+
+    <!-- Subtítulo debajo del título principal -->
+    <p class="subtitulo-header">Saint Seiya — Tutorial de Personajes</p>
+
+  </header>
+  <!-- Fin del header -->
+
+  <!-- ======================================================
+    <nav> — Barra de navegación
+    Contiene el índice con enlaces internos a cada sección.
+    Los enlaces usan href="#id" para ir a la sección con ese id.
+  ====================================================== -->
+  <nav>
+    <!-- Etiqueta descriptiva del nav -->
+    <span class="nav-label">Índice del Tutorial</span>
+
+    <!-- 
+      <ol> — Lista ORDENADA
+      Los ítems van numerados automáticamente por el navegador.
+      Aquí la numeración la hacemos manualmente con CSS (counter)
+      para tener más control visual.
+    -->
+    <ol>
+      <!-- 
+        <li> — Ítem de la lista
+        <a href="#seiya"> — Enlace interno.
+        El # indica que es un ancla dentro de la misma página.
+        El browser buscará un elemento con id="seiya" y navegará
+        hacia él (con scroll suave gracias a scroll-behavior:smooth).
+      -->
+      <li><a href="#seiya">Seiya de Pegaso</a></li>
+      <li><a href="#shiryu">Shiryu del Dragón</a></li>
+      <li><a href="#hyoga">Hyoga del Cisne</a></li>
+      <li><a href="#shun">Shun de Andrómeda</a></li>
+      <li><a href="#ikki">Ikki del Fénix</a></li>
+      <li><a href="#cosmos">El Cosmos</a></li>
+    </ol>
+
+  </nav>
+  <!-- Fin del nav -->
+
+  <!-- ======================================================
+    <main> — Contenido principal de la página
+    Solo debe haber UN <main> por página.
+    Agrupa el contenido central que diferencia esta página
+    de otras.
+  ====================================================== -->
+  <main>
+
+    <!-- --------------------------------------------------
+      Sección de introducción
+    -------------------------------------------------- -->
+    <div class="intro">
+      <h2>¿Qué es Saint Seiya?</h2>
+      <p>
+        <em>Los Caballeros del Zodiaco</em> (Saint Seiya) es un manga creado por 
+        <strong>Masami Kurumada</strong> en 1985. Narra las aventuras de jóvenes guerreros —
+        los <em>Santos</em> — que protegen a la diosa Atenea con el poder del <strong>Cosmo</strong>,
+        la energía interior del universo. Cada caballero porta una <strong>Armadura Sagrada</strong>
+        inspirada en las constelaciones del zodíaco.
+      </p>
+    </div>
+
+    <!-- ==================================================
+      SECCIÓN 1: SEIYA DE PEGASO
+      id="seiya" → este es el ancla al que apunta el enlace
+      href="#seiya" del índice.
+    ================================================== -->
+    <section id="seiya">
+
+      <!-- 
+        <h2> — Encabezado de nivel 2 (subsección)
+        Debe haber varios h2 en la página, uno por sección importante.
+      -->
+      <h2>
+        <span class="num-seccion">01</span>
+        Seiya de Pegaso
+      </h2>
+
+      <!-- Tarjeta del caballero: grid de imagen + texto -->
+      <div class="card-caballero">
+
+        <!-- Columna izquierda: imagen -->
+        <div class="card-imagen">
+
+          <!-- Badge del signo zodiacal, posicionado sobre la imagen -->
+          <span class="badge-signo">✦ Pegaso</span>
+
+          <!-- 
+            <img> — Etiqueta de imagen.
+            src=""  → la ruta o URL de la imagen. Usamos una imagen
+                       de placeholder con los colores del personaje.
+            alt=""  → texto alternativo OBLIGATORIO por accesibilidad.
+                       Se muestra si la imagen no carga y lo leen
+                       los lectores de pantalla para personas ciegas.
+            width y height → dimensiones en píxeles (ayuda al navegador
+                             a reservar el espacio antes de cargar la imagen).
+          -->
+          <img 
+            src="https://cdn.pixabay.com/photo/2023/11/20/13/48/ai-generated-8400815_960_720.png"
+            alt="Seiya de Pegaso con su armadura dorada brillando bajo el cielo estrellado"
+            width="280"
+            height="300"
+          >
+
+        </div>
+        <!-- Fin de la columna de imagen -->
+
+        <!-- Columna derecha: información del caballero -->
+        <div class="card-contenido">
+
+          <!-- Nombre del caballero -->
+          <h3 class="card-nombre">Seiya</h3>
+
+          <!-- Subtítulo: nombre de la armadura -->
+          <p class="card-armadura">⚔ Armadura de Pegaso</p>
+
+          <!-- Línea separadora decorativa -->
+          <div class="card-divider"></div>
+
+          <!-- Descripción del personaje -->
+          <p class="card-descripcion">
+            Protagonista principal de la serie. Seiya es un joven huérfano que obtiene la 
+            <strong>Armadura de Bronce de Pegaso</strong> tras años de entrenamiento en Grecia. 
+            Su voluntad indomable y amor por sus amigos le permite alcanzar el nivel de los 
+            <em>Caballeros Dorados</em> en momentos críticos. Representa la esencia del
+            espíritu Saint Seiya: nunca rendirse.
+          </p>
+
+          <!-- 
+            <ul> — Lista NO ordenada.
+            Aquí listamos las técnicas del personaje.
+            A diferencia del <ol>, los ítems no tienen orden numérico implícito.
+          -->
+          <ul class="card-habilidades">
+            <li>
+              <!-- <strong> resalta el nombre de la técnica en negrita -->
+              <strong>Meteoro de Pegaso:</strong> 
+              Ráfaga de puñetazos a la velocidad de la luz que imita una lluvia de meteoros.
+            </li>
+            <li>
+              <strong>Meteoro Suicida de Pegaso:</strong>
+              Versión potenciada donde Seiya libera todo su Cosmo concentrado en un solo golpe.
+            </li>
+            <li>
+              <strong>Ryu Sei Ken:</strong>
+              Técnica original en japonés: "Puño de la Lluvia de Meteoros de Pegaso".
+            </li>
+          </ul>
+
+        </div>
+        <!-- Fin del contenido de texto -->
+
+      </div>
+      <!-- Fin de la tarjeta -->
+
+    </section>
+    <!-- Fin de la sección de Seiya -->
+
+    <!-- ==================================================
+      SECCIÓN 2: SHIRYU DEL DRAGÓN
+    ================================================== -->
+    <section id="shiryu">
+
+      <h2>
+        <span class="num-seccion">02</span>
+        Shiryu del Dragón
+      </h2>
+
+      <div class="card-caballero">
+
+        <div class="card-imagen">
+          <span class="badge-signo">✦ Dragón</span>
+          <img 
+            src="https://cdn.pixabay.com/photo/2023/08/10/05/39/ai-generated-8181834_960_720.png"
+            alt="Shiryu del Dragón con su escudo místico y armadura brillante junto a una cascada"
+            width="280"
+            height="300"
+          >
+        </div>
+
+        <div class="card-contenido">
+          <h3 class="card-nombre">Shiryu</h3>
+          <p class="card-armadura">⚔ Armadura del Dragón</p>
+          <div class="card-divider"></div>
+          <p class="card-descripcion">
+            El más sabio y sereno del grupo. Shiryu entrenó bajo la enseñanza del 
+            <strong>Viejo Maestro Roshi</strong> en las Montañas Lu Shan, China. 
+            Su <em>Armadura del Dragón</em> posee el escudo más resistente del mundo, 
+            capaz de detener cualquier ataque. Sin embargo, Shiryu no duda en 
+            sacrificar su armadura —e incluso su vista— para derrotar a sus enemigos.
+          </p>
+          <ul class="card-habilidades">
+            <li>
+              <strong>Piel del Dragón:</strong>
+              El escudo más duro del universo, capaz de bloquear cualquier ataque.
+            </li>
+            <li>
+              <strong>Colmillo del Dragón:</strong>
+              Ataque de energía en forma de llamas de dragón que destroza armaduras.
+            </li>
+            <li>
+              <strong>Galacxian Explosion:</strong>
+              Técnica suprema que canaliza todo el Cosmo en una explosión devastadora.
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================================================
+      SECCIÓN 3: HYOGA DEL CISNE
+    ================================================== -->
+    <section id="hyoga">
+
+      <h2>
+        <span class="num-seccion">03</span>
+        Hyoga del Cisne
+      </h2>
+
+      <div class="card-caballero">
+
+        <div class="card-imagen">
+          <span class="badge-signo">✦ Cisne</span>
+          <img 
+            src="https://cdn.pixabay.com/photo/2023/11/06/08/59/ai-generated-8369794_960_720.png"
+            alt="Hyoga del Cisne rodeado de cristales de hielo y temperaturas bajo cero"
+            width="280"
+            height="300"
+          >
+        </div>
+
+        <div class="card-contenido">
+          <h3 class="card-nombre">Hyoga</h3>
+          <p class="card-armadura">⚔ Armadura del Cisne</p>
+          <div class="card-divider"></div>
+          <p class="card-descripcion">
+            Hyoga es un joven frío como el hielo en apariencia, pero con un corazón noble y 
+            profundo. Entrenó en la <strong>Siberia rusa</strong> bajo la tutela del 
+            <em>Caballero Dorado Camus de Acuario</em>, su propio maestro y padre espiritual. 
+            Domina el poder del <strong>Cero Absoluto</strong> (-273°C), la temperatura 
+            más baja posible, capaz de detener hasta los átomos.
+          </p>
+          <ul class="card-habilidades">
+            <li>
+              <strong>Diamante del Cisne:</strong>
+              Granizo de cristales de hielo disparados a velocidad supersónica.
+            </li>
+            <li>
+              <strong>Aurora Execution:</strong>
+              Técnica heredada de Camus. Congela al enemigo con el Cero Absoluto.
+            </li>
+            <li>
+              <strong>Kholodnyi Svet:</strong>
+              Técnica original rusa: ráfaga de luz helada que paraliza instantáneamente.
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================================================
+      SECCIÓN 4: SHUN DE ANDRÓMEDA
+    ================================================== -->
+    <section id="shun">
+
+      <h2>
+        <span class="num-seccion">04</span>
+        Shun de Andrómeda
+      </h2>
+
+      <div class="card-caballero">
+
+        <div class="card-imagen">
+          <span class="badge-signo">✦ Andrómeda</span>
+          <img 
+            src="https://cdn.pixabay.com/photo/2024/01/29/22/26/ai-generated-8540130_960_720.png"
+            alt="Shun de Andrómeda con sus cadenas de nebulin verde brillando a su alrededor"
+            width="280"
+            height="300"
+          >
+        </div>
+
+        <div class="card-contenido">
+          <h3 class="card-nombre">Shun</h3>
+          <p class="card-armadura">⚔ Armadura de Andrómeda</p>
+          <div class="card-divider"></div>
+          <p class="card-descripcion">
+            El más gentil y pacífico del grupo. Shun evita el combate siempre que puede,
+            pero cuando lucha, es devastador. Entrenó en la mítica isla de 
+            <strong>Andrómeda</strong>. Su poder es considerado el mayor del grupo, 
+            ya que es el recipiente del dios oscuro <em>Hades</em>. Sus cadenas de 
+            <strong>Nebulin</strong> pueden endurecerse para atacar o suavizarse para 
+            atrapar y defender.
+          </p>
+          <ul class="card-habilidades">
+            <li>
+              <strong>Nebula Chain:</strong>
+              Cadenas de energía que rodean y estrangulan al enemigo con fuerza cósmica.
+            </li>
+            <li>
+              <strong>Rolling Defense:</strong>
+              Las cadenas forman una esfera protectora indestructible alrededor de Shun.
+            </li>
+            <li>
+              <strong>Nebula Storm:</strong>
+              Liberación total del Cosmo de Andrómeda: destruye todo en un radio enorme.
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================================================
+      SECCIÓN 5: IKKI DEL FÉNIX
+    ================================================== -->
+    <section id="ikki">
+
+      <h2>
+        <span class="num-seccion">05</span>
+        Ikki del Fénix
+      </h2>
+
+      <div class="card-caballero">
+
+        <div class="card-imagen">
+          <span class="badge-signo">✦ Fénix</span>
+          <img 
+            src="https://cdn.pixabay.com/photo/2023/09/27/07/19/ai-generated-8278507_960_720.png"
+            alt="Ikki del Fénix emergiendo de las llamas con su armadura oscura brillante"
+            width="280"
+            height="300"
+          >
+        </div>
+
+        <div class="card-contenido">
+          <h3 class="card-nombre">Ikki</h3>
+          <p class="card-armadura">⚔ Armadura del Fénix</p>
+          <div class="card-divider"></div>
+          <p class="card-descripcion">
+            El lobo solitario del grupo y hermano mayor de Shun. Ikki es el guerrero 
+            más feroz e independiente. Entrenó en la infernal <strong>Isla de la Muerte</strong> 
+            bajo un maestro cruel. La <em>Armadura del Fénix</em> es única: 
+            se <strong>regenera y fortalece</strong> cada vez que su portador muere, 
+            haciéndolo prácticamente inmortal. Su Cosmo es el más poderoso y oscuro del grupo.
+          </p>
+          <ul class="card-habilidades">
+            <li>
+              <strong>Phoenix Illusion:</strong>
+              Ilusión mental que ataca directamente el alma del enemigo desde adentro.
+            </li>
+            <li>
+              <strong>Hōō Genmaken:</strong>
+              La "Ilusión Divina del Fénix": el enemigo revive su peor miedo eternamente.
+            </li>
+            <li>
+              <strong>Phoenix Fist:</strong>
+              Golpe de fuego divino que literalmente destruye cuerpo y alma del oponente.
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================================================
+      SECCIÓN 6: EL COSMOS
+      Una sección especial con cuadrícula de información.
+    ================================================== -->
+    <section id="cosmos">
+
+      <h2>
+        <span class="num-seccion">06</span>
+        El Cosmo — La Energía Sagrada
+      </h2>
+
+      <!-- Esta sección tiene su propio estilo especial -->
+      <div class="cosmos-section">
+
+        <!-- Descripción introductoria del Cosmo -->
+        <p style="color: var(--color-texto2); font-size: 1.1rem; max-width: 700px; line-height: 1.9;">
+          El <strong style="color: var(--color-oro);">Cosmo</strong> es la energía 
+          fundamental que reside en todos los seres vivos. Los Santos entrenan para 
+          encender, amplificar y controlar esta energía interior. Cuanto más arden en 
+          su corazón, más poderoso se vuelve su Cosmo. Existen varios 
+          <em>niveles de quema del Cosmos</em>:
+        </p>
+
+        <!-- Cuadrícula de niveles de Cosmos -->
+        <div class="cosmos-grid">
+
+          <!-- Cada div es un nivel de poder -->
+          <div class="cosmos-item">
+            <!-- Emoji como símbolo visual del nivel -->
+            <span class="cosmos-nivel">🥉</span>
+            <p class="cosmos-titulo">Bronce</p>
+            <!-- 
+              <p> — párrafo de texto descriptivo.
+              Es el elemento más básico para texto en HTML.
+            -->
+            <p class="cosmos-desc">
+              Nivel básico. Caballeros como Seiya, Shiryu, Hyoga, Shun e Ikki. 
+              Capaces de mover a la velocidad del sonido.
+            </p>
+          </div>
+
+          <div class="cosmos-item">
+            <span class="cosmos-nivel">🥈</span>
+            <p class="cosmos-titulo">Plata</p>
+            <p class="cosmos-desc">
+              Nivel intermedio. Caballeros que superan a los de Bronce en poder 
+              y velocidad. Son guardias de templos menores.
+            </p>
+          </div>
+
+          <div class="cosmos-item">
+            <span class="cosmos-nivel">🥇</span>
+            <p class="cosmos-titulo">Oro</p>
+            <p class="cosmos-desc">
+              Los más poderosos, 12 en total. Guardianes de las 12 Casas del Zodiaco. 
+              Mueven a la velocidad de la luz.
+            </p>
+          </div>
+
+          <div class="cosmos-item">
+            <span class="cosmos-nivel">⚡</span>
+            <p class="cosmos-titulo">Séptimo Sentido</p>
+            <p class="cosmos-desc">
+              La máxima quema del Cosmo. Permite alcanzar la velocidad de la luz 
+              y golpear con el poder de las estrellas.
+            </p>
+          </div>
+
+        </div>
+        <!-- Fin del cosmos-grid -->
+
+      </div>
+      <!-- Fin de cosmos-section -->
+
+    </section>
+    <!-- Fin de la sección cosmos -->
+
+  </main>
+  <!-- Fin del <main> -->
+
+  <!-- ======================================================
+    <footer> — Pie de página
+    Contiene información de créditos y datos del autor.
+  ====================================================== -->
+  <footer>
+
+    <!-- Símbolo decorativo del footer -->
+    <span class="footer-logo" aria-hidden="true">⚡</span>
+
+    <!-- Texto del pie de página -->
+    <p class="footer-texto">
+      Los Caballeros del Zodiaco — Tutorial de Personajes
+    </p>
+
+    <!-- Créditos académicos del documento -->
+    <p class="footer-sena">
+      GA6-220501096-AA4-EV01 &nbsp;|&nbsp; 
+      Gerson Jonnathan López Oviedo &nbsp;|&nbsp; 
+      Ficha: 3186647 &nbsp;|&nbsp; SENA 2026
+    </p>
+    <!-- 
+      &nbsp; → entidad HTML para espacio sin salto de línea.
+      &amp;  → entidad para el símbolo &
+      Estas se llaman "entidades HTML" y sirven para mostrar
+      caracteres especiales que el navegador podría confundir
+      con código HTML.
+    -->
+
+  </footer>
+  <!-- Fin del footer -->
+
+</body>
+<!-- Fin del <body> -->
+
+</html>
+<!-- 
+  Fin del documento HTML.
+  Siempre cerrar la etiqueta </html> al final.
+-->
