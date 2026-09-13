@@ -213,7 +213,7 @@ desarrollo local → virtualización → contenedores → producción real en in
 
 ## 🗃️ Modelo de Base de Datos
 
-10 tablas normalizadas (1FN, 2FN, 3FN) en MySQL/PostgreSQL:
+10 tablas normalizadas (1FN, 2FN, 3FN) en MySQL/MariaDB:
 
 `tipo_usuario` → `usuario` → `oferta` → `trueque` → `evaluacion`
 
