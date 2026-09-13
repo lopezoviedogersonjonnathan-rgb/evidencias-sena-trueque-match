@@ -1,158 +1,198 @@
-# 🤝 TRUEQUE MATCH
-### Plataforma Colombiana de Intercambio Sin Dinero
+# 📚 Evidencias SENA — Trueque Match
 
-**Estudiante:** Gerson Jonnathan López Oviedo  
-**Ficha:** 3186647  
-**Instructor:** Arnaldo Alfonso Montiel Brun  
-**Programa:** Tecnólogo en Análisis y Desarrollo de Software  
-**Empresa:** G.L. Software Solutions  
-**SENA 2026**
+Repositorio de respaldo con todas las evidencias del programa **Tecnólogo en Análisis y Desarrollo de Software**, ficha **3186647**, instructor **Arnaldo Alfonso Montiel Brun**, proyecto formativo **Trueque Match**.
 
-🌍 **En producción:** http://truequematch-gerson.great-site.net/truequematch/app_trueque_match/
+> ⚠️ Este repositorio contiene documentos de evidencias académicas, no código de producción. El proyecto real (código) vive en:
+> https://github.com/lopezoviedogersonjonnathan-rgb/proyecto_sena
 
----
+## 📊 Resumen general
 
-## 🌐 Descripción
-
-Trueque Match es una aplicación web y móvil que permite a los colombianos intercambiar productos, servicios, conocimientos y experiencias **sin necesidad de dinero**. Promueve la economía colaborativa conectando personas que tienen algo que ofrecer con quienes lo necesitan.
+- **Total de evidencias formales identificadas:** 91
+- ✅ Con Word y PDF: **73**
+- 📝 Solo Word (sin exportar a PDF todavía): **13**
+- 📄 Solo PDF (sin el Word original): **2**
+- ⚠️ Otro formato / pendiente de revisar: **3**
 
 ---
 
-## 🚀 Stack Tecnológico
+## Fase 1 — Inducción
 
-| Capa | Tecnología | Estado |
-|------|-----------|--------|
-| Backend Web | PHP 8.2 + MariaDB | ✅ Funcional |
-| Frontend Web | HTML5 + CSS3 + JavaScript | ✅ Funcional |
-| Base de Datos | MariaDB via XAMPP puerto 3307 | ✅ Funcional |
-| App Móvil | React Native + Expo (Android) | ✅ Probada en Redmi 9 (Gerson) y Redmi 10C (Sandra) |
-| APIs REST | 11 endpoints PHP | ✅ Todas probadas en Postman con datos reales |
-| Control de versiones | Git + GitHub | ✅ Funcional |
-| IDE | Visual Studio Code | ✅ Configurado |
-| Hosting / Producción | InfinityFree | ✅ En línea desde septiembre 2026 |
+*0 evidencias formales encontradas en esta fase.*
 
 ---
 
-## 📋 Evidencias SENA
+## Fase 2 — Análisis
 
-| Evidencia | Descripción | Estado |
-|-----------|-------------|--------|
-| GA4-220501095-AA1-EV02 | Modelo conceptual y lógico del proyecto | ✅ |
-| GA4-220501095-AA2-EV02 | Informe de entregables para el proyecto | ✅ |
-| GA6-220501096-AA1-EV01 | Modelo Relacional + Normalización 1FN/2FN/3FN | ✅ |
-| GA6-220501096-AA1-EV02 | Modelo Entidad Relación (MySQL Workbench) | ✅ |
-| GA6-220501096-AA1-EV03 y EV04 | Creación y elaboración de base de datos NoSQL (MongoDB) | ✅ |
-| GA6-220501096-AA2-EV01 | Informe técnico: sentencias DDL y DML de SQL | ✅ |
-| GA6-220501096-AA4-EV03 | Front-End HTML/CSS/JS + PHP + MariaDB + GitHub | ✅ |
-| GA7-220501096-AA4-EV02 y EV03 | Componentes Front-End | ✅ |
-| GA7-220501096-AA3-EV01 y EV02 | Video de sustentación | ✅ |
-| GA7-220501096-AA5-EV02, EV03 y EV04 | APIs REST probadas en Postman (video) | ✅ |
-| GA10-220501097-AA5-EV01 y AA6-EV01 | Despliegue a producción (InfinityFree) | ✅ |
+*21 evidencias formales encontradas en esta fase.*
 
----
-
-## 🗄️ Base de Datos
-
-- **Motor:** MariaDB 10.x via XAMPP | **Puerto:** 3307
-- **BD:** `trueque_match_db` | **Tablas:** 10 normalizadas (1FN, 2FN, 3FN)
-
-| Tabla | Descripción |
-|-------|-------------|
-| tipo_usuario | Roles del sistema |
-| usuario | Usuarios registrados |
-| administrador | Gestores del sistema |
-| oferta | Publicaciones de intercambio |
-| trueque | Intercambios formalizados |
-| evaluacion | Calificaciones 1-5 estrellas |
-| solicitud | Contacto previo al trueque |
-| notificacion | Alertas del sistema |
-| reporte | Denuncias de usuarios |
-| usuario_oferta | Favoritos (tabla N:M) |
+| Evidencia | Formato disponible |
+|---|---|
+| Grabación conferencia web. GA1-220501092-AA1-EV01 - GA1-220501092-AA1-EV02. 15042025 | ✅ Word + PDF |
+| Grabación conferencia web. GA1-220501092-AA5-EV01. - GA1-220501092-AA5-EV02 | ✅ Word + PDF |
+| Grabación conferencia web. GA1-220501092-AA5-EV01. - GA1-220501092-AA5-EV02. 25062025 | ✅ Word + PDF |
+| Grabación conferencia web. GA2-220501093-AA1-EV01. 08072025 | ✅ Word + PDF |
+| Grabación conferencia web. GA2-220501093-AA1-EV01. - GA2-220501093-AA1-EV03. 16072025 | ✅ Word + PDF |
+| Grabación conferencia web. GA2-220501093-AA1-EV04. - GA2-220501093-AA2-EV01. 22072025 | ✅ Word + PDF |
+| Grabación conferencia web. Grabación conferencia web. GA2-220501093-AA1-EV04. - GA2-220501093-AA2-EV01. 22072025 | ✅ Word + PDF |
+| Grabación conferencia web. GA2-220501093-AA3-EV01. 29072025 | ✅ Word + PDF |
+| Grabación conferencia web. GA2-220501093-AA3-EV02 - GA2-220501094-AA1-EV01 | ✅ Word + PDF |
+| Grabación conferencia web. GA2-220501094-AA1-EV02. - GA2-220501094-AA1-EV03. 12082025 | ✅ Word + PDF |
+| Grabación conferencia web. GA2-220501094-AA2-EV01. - GA2-220501094-AA3-EV01.19082025 | ✅ Word + PDF |
+| Grabación conferencia web. GA1-220501092-AA1-EV03 | ✅ Word + PDF |
+| Grabación conferencia web. GA2-220501094-AA3-EV02.. - GA2-220501094-AA4-EV01 | ✅ Word + PDF |
+| Grabación conferencia web. GA1-220501092-AA2-EV01 | ✅ Word + PDF |
+| Grabación conferencia web. GA1-220501046-AA1-EV01 | ✅ Word + PDF |
+| Grabación conferencia web. GA1-220501046-AA3-EV01 - GA1-220501046-AA4-EV01. 13052025 | ✅ Word + PDF |
+| Grabación conferencia web. GA1-220501092-AA2-EV02 | 📝 Solo Word |
+| Grabación conferencia web. GA1-220501092-AA3-EV01 - GA1-220501092-AA3-EV02 | ✅ Word + PDF |
+| Grabación conferencia web. GA1-220501092-AA3-EV03 | ✅ Word + PDF |
+| Grabación conferencia web. GA1-220501092-AA4-EV01. - GA1-220501092-AA4-EV02 | ✅ Word + PDF |
+| GA2-220501093-AA2-EV01 Elaboración de los diagramas del modelo de dominio del proyecto | 📄 Solo PDF |
 
 ---
 
-## 🔌 APIs REST (11 endpoints — todas probadas en Postman)
+## Fase 3 — Programación
 
-| API | Recurso que maneja |
-|-----|--------------------|
-| `api_login.php` | Autenticación de usuarios |
-| `api_registro.php` | Registro de usuarios nuevos |
-| `api_ofertas.php` | Ofertas: crear (POST), listar (GET), editar (PUT), eliminar (DELETE) |
-| `api_solicitudes.php` | Solicitudes de contacto previo al trueque |
-| `api_trueques.php` | Trueques formalizados |
-| `api_evaluaciones.php` | Evaluaciones y reputación de usuarios |
-| `api_favoritos.php` | Ofertas favoritas de cada usuario |
-| `api_notificaciones.php` | Notificaciones del sistema |
-| `api_reportes.php` | Reportes/denuncias de usuarios |
+*20 evidencias formales encontradas en esta fase.*
 
-> Nota: `api_ofertas.php` es el único endpoint oficial para editar y eliminar ofertas (PUT/DELETE). Los antiguos `api_editar_oferta.php` y `api_eliminar_oferta.php` fueron retirados para evitar duplicidad de código.
-
----
-
-## 📁 Estructura del Proyecto
-```
-proyecto_sena/
-├── README.md
-├── conexion.php
-├── agregar_oferta.php
-├── ofertas.php
-├── editar_oferta.php
-├── trueque_match_db.sql
-└── app_trueque_match/
-    ├── index.html
-    ├── login.php
-    ├── registro.php
-    ├── dashboard.php
-    ├── mis_ofertas_ajax.php
-    ├── guardar_oferta.php
-    ├── eliminar_oferta.php
-    ├── cerrar_sesion.php
-    ├── como-funciona.html
-    ├── api_login.php
-    ├── api_registro.php
-    ├── api_ofertas.php
-    ├── api_solicitudes.php
-    ├── api_trueques.php
-    ├── api_evaluaciones.php
-    ├── api_favoritos.php
-    ├── api_notificaciones.php
-    ├── api_reportes.php
-    ├── styles.css
-    ├── app.js
-    └── LOGO_FINAL.png
-```
----
-## 🎥 Videos de Evidencias
-
-### GA7-AA3-EV01 y EV02 — Video de sustentación
-
-📹 https://youtu.be/Kis8zE8BeT4?si=l61Aqz02DDFPFNM7
-
-En este video se presenta la explicación y desarrollo de las evidencias GA7-220501096-AA3-EV01 y GA7-220501096-AA3-EV02 correspondientes al proyecto app TRUEQUE MATCH.
-
-### GA7-AA5-EV02, EV03 y EV04 — Pruebas de APIs en Postman
-
-📹 https://youtu.be/Klnpu9v9o8Y?si=G9hOcj40Blfm2daB
+| Evidencia | Formato disponible |
+|---|---|
+| GA2-220501094-AA4-EV02. Propuesta técnica y económica con ajustes | 📄 Solo PDF |
+| Evidencia GA4-220501095-AA2-EV01. Taller de conceptos y principios de programación orientada a | ✅ Word + PDF |
+| Evidencia GA4-220501095-AA2-EV02. Informe de entregables para el proyecto de desarrollo de | ✅ Word + PDF |
+| Evidencia GA4-220501095-AA2-EV03. Bases conceptuales acerca del lenguaje unificado de modelado | ✅ Word + PDF |
+| Diagrama de clases del proyecto de software. GA4-220501095-AA2-EV04 | ✅ Word + PDF |
+| Evidencia GA4-220501095-AA2-EV05. Diagrama de componentes y de despliegue | ✅ Word + PDF |
+| Evidencia GA4-220501095-AA2-EV06. Taller. Arquitectura de software | ✅ Word + PDF |
+| Evidencia GA4-220501095-AA3-EV01. Mapa conceptual - Identificación y caracterización de los | ✅ Word + PDF |
+| Evidencia GA4-220501095-AA3-EV02. Foro - Implementar la arquitectura de software | 📝 Solo Word |
+| Evidencia GA4-220501095-AA3-EV03.docx Diagrama de despliegue para caso de estudio y proyecto de software | ✅ Word + PDF |
+| GA4-220501095-AA4-EV01 Taller sobre validación de documentos | ✅ Word + PDF |
+| Evidencia GA4-220501095-AA4-EV02. Diseño de instrumentos para verificación de artefactos | ✅ Word + PDF |
+| Evidencia GA3-220501093-AA2-EV01. Fundamentos de programación estructurada y estructuras | ✅ Word + PDF |
+| Evidencia GA3-220501093-AA2-EV02. Foro temático - Estructuras de programación | 📝 Solo Word |
+| Evidencia GA3-220501093-AA2-EV03. Taller funciones y procedimientos en la solución de algoritmos | ✅ Word + PDF |
+| Evidencia GA3-220501093-AA3-EV01. Bases teóricas de estructuras de almacenamiento en memoria | ✅ Word + PDF |
+| GA3-220501093-AA3-EV02. Resolución a problemas algorítmicos aplicando estructuras de almacenamiento | ✅ Word + PDF |
+| Evidencia GA4-220501095-AA1-EV01. Diseñar el modelo conceptual y lógico, de acuerdo al caso de | ✅ Word + PDF |
+| Evidencia GA4-220501095-AA1-EV02. Modelo conceptual y lógico para el proyecto desarrollo de | ✅ Word + PDF |
+| Evidencia GA3-220501093-AA2-EV03. EJERCICIOS | ⚠️ Otro formato |
 
 ---
 
-## 🌍 Despliegue en producción
+## Fase 4 — Planeación
 
-Trueque Match ya está funcionando en internet, de punta a punta, no solo en el entorno local de XAMPP.
+*7 evidencias formales encontradas en esta fase.*
 
-- **URL en vivo:** http://truequematch-gerson.great-site.net/truequematch/app_trueque_match/
-- **Hosting:** InfinityFree (Linux + MySQL/MariaDB), subido manualmente vía File Manager
-- **Verificado en producción:**
-  - ✅ Login real con credenciales de la base de datos (`login.php`)
-  - ✅ Lectura de ofertas (`mis_ofertas_ajax.php`)
-  - ✅ Lectura de trueques, evaluaciones y notificaciones (`dashboard.php`)
-  - ✅ Escritura real: publicación de una oferta nueva de prueba, guardada correctamente en la base de datos de producción (`guardar_oferta.php`)
-
-> Nota técnica: como el hosting de producción usa Linux (sensible a mayúsculas/minúsculas en nombres de tabla) y no está conectado automáticamente a GitHub, cada actualización de código debe subirse manualmente al hosting después de cada `git push` para que el cambio se vea reflejado en la URL en vivo.
+| Evidencia | Formato disponible |
+|---|---|
+| Evidencia GA5-220501095-AA1-EV01. Taller sobre construcción del prototipo del software | ✅ Word + PDF |
+| Evidencia GA5-220501095-AA1-EV02. Nociones de reglas de usabilidad y accesibilidad en | ✅ Word + PDF |
+| Evidencia GA5-220501095-AA1-EV03. Elaboración de interfaz gráfica y mapa de navegación | ✅ Word + PDF |
+| Evidencia GA5-220501095-AA1-EV04. Maquetación de la interfaz gráfica en HTML | ✅ Word + PDF |
+| Evidencia GA5-220501095-AA1-EV05. Mapa de navegación | ✅ Word + PDF |
+| Evidencia GA5-220501095-AA1-EV06. Nociones de reglas de usabilidad y accesibilidad en | ✅ Word + PDF |
+| Evidencia GA5-220501095-AA1-EV08 | ✅ Word + PDF |
 
 ---
 
-## 📌 Estado del proyecto
+## Fase 5 — Ejecución
 
-Las 11 APIs REST están confirmadas funcionando tanto por revisión de código como por ejecución real en Postman con datos reales, y el proyecto completo ya está desplegado y verificado en producción (ver sección "Despliegue en producción"). El proyecto sigue en fase de pulido de detalles menores (manual de usuario, exportación de diagramas EER en HD) antes de la recopilación final de evidencias.
+*35 evidencias formales encontradas en esta fase.*
 
+| Evidencia | Formato disponible |
+|---|---|
+| Evidencia GA8-220501096-AA1-EV01. Desarrollar software a partir de la integración de sus módulos | ✅ Word + PDF |
+| Evidencia GA8-220501096-AA1-EV02. Módulos integrados | ✅ Word + PDF |
+| Evidencia GA8-220501096-AA2-EV01. Taller. Integración, tecnologías emergentes y disruptivas | ✅ Word + PDF |
+| Evidencia GA8-220501096-AA2-EV02. APK (desarrollar módulos móviles según requerimientos del | ✅ Word + PDF |
+| Evidencia GA8-220501096-AA2-EV03. Taller. Integración, tecnologías emergentes y disruptivas | 📝 Solo Word |
+| Video exposición sobre machine learning. GA8-220501096-AA2-EV04 | 📝 Solo Word |
+| Evidencia GA8-220501096-AA2-EV05. Texto argumentativo sobre blockchain | ✅ Word + PDF |
+| Evidencia GA6-220501096-AA1-EV01. Resolución de problemas aplicando el modelo relacional | ✅ Word + PDF |
+| Evidencia GA6-220501096-AA3-EV03. Interfaces gráficas según requerimientos del proyecto | ✅ Word + PDF |
+| Evidencia GA6-220501096-AA4-EV01. Fundamentos en la implementación de componentes front | 📝 Solo Word |
+| Evidencia GA6-220501096-AA4-EV02. Establecer los componentes front-end de la aplicación web | ✅ Word + PDF |
+| Evidencia GA6-220501096-AA4-EV03. Diseño front-end que cumpla con los requerimientos del | ✅ Word + PDF |
+| GA6-220501096-AA4-EV02 + EV03 | ⚠️ Otro formato |
+| Evidencia GA6-220501096-AA1-EV02. Modelo entidad relación de caso | ✅ Word + PDF |
+| Evidencia GA6-220501096-AA1-EV04. Elaboración de las bases de datos | ⚠️ Otro formato |
+| Evidencia GA6-220501096-AA1-EV03. Creación de los objetos de la base de datos | ✅ Word + PDF |
+| Evidencia GA6-220501096-AA2-EV01. Destrezas y conocimientos en el manejo de sentencias DDL y | ✅ Word + PDF |
+| Evidencia GA6-220501096-AA2-EV02. Creación de la estructura de la BD y aplicación de restricciones | ✅ Word + PDF |
+| GA6-220501096-AA2-EV03_Script_BD_TruequeMatch | ✅ Word + PDF |
+| Evidencia GA6-220501096-AA3-EV01 y Evidencia GA6-220501096-AA3-EV02 Mockups | ✅ Word + PDF |
+| Evidencia GA7-220501096-AA1-EV002 | ✅ Word + PDF |
+| Evidencia GA7-220501096-AA4-EV03 Componente front-end del proyecto formativo y proyectos de clase | ✅ Word + PDF |
+| Evidencia GA7-220501096-AA5-EV01. Diseño y desarrollo de servicios web - caso | ✅ Word + PDF |
+| Evidencias API. GA7-220501096-AA5-EV02; GA7-220501096-AA5-EV03 y GA7-220501096-AA5-EV04 | ✅ Word + PDF |
+| Evidencia GA7-220501096-AA1-EV02. Definir estándares de codificación, de acuerdo con la | ✅ Word + PDF |
+| Evidencia GA7-220501096-AA1-EV03. Identifica herramientas de versionamiento | ✅ Word + PDF |
+| Evidencia GA7-220501096-AA1-EV04-EV05 | ✅ Word + PDF |
+| Evidencia GA7-220501096-AA1-EV04-EV05 (segunda carpeta) | ✅ Word + PDF |
+| Evidencia GA7-220501096-AA2-EV01 - Evidencia GA7-220501096-AA2-EV02 | ✅ Word + PDF |
+| Evidencia GA7-220501096-AA4-EV01. Taller sobre componentes front-end | ✅ Word + PDF |
+| Evidencia GA7-220501096-AA4-EV02. Verificación de procedimientos para la definición de | ✅ Word + PDF |
+| Evidencia GA9-220501096-AA1-EV01. Taller sobre codificación de módulos del software | 📝 Solo Word |
+| GA9-220501096-AA1-EV02_Plan_Pruebas_TruequeMatch | 📝 Solo Word |
+| Evid.GA9-220501096-AA2-EV01-AA3-EV01-AA3-EV02 | 📝 Solo Word |
+
+---
+
+## Fase 6 — Despliegue (GA10)
+
+*8 evidencias formales encontradas en esta fase.*
+
+| Evidencia | Formato disponible |
+|---|---|
+| Evidencia GA10-220501097-AA1-EV01 | ✅ Word + PDF |
+| Evidencia GA10-220501097-AA2-EV01. Elaborar plan de validación de características mínimas de | 📝 Solo Word |
+| Evidencia GA10-220501097-AA3-EV01. Software instalado en la plataforma del cliente | ✅ Word + PDF |
+| Evidencia GA10-220501097-AA4-EV01. Conceptos y principios acerca de configuración de servicios | 📝 Solo Word |
+| Evidencia GA10-220501097-AA5-EV01. Configuración de servicios, bases de datos y software en el | 📝 Solo Word |
+| Evidencia GA10-220501097-AA5-EV01_AA6-EV01 y llevar Trueque Match a internet | ✅ Word + PDF |
+| Evidencia GA10-220501097-AA7-EV01. Realización de pruebas de funcionalidad del software | 📝 Solo Word |
+| Evidencia GA10-220501097-AA8-EV01. Diseñar plan de mantenimiento y soporte del software | ✅ Word + PDF |
+
+---
+
+## 📋 Pendientes detectados
+
+Las siguientes evidencias tienen **solo Word** (sin PDF exportado todavía) — si la plataforma de entrega exige PDF, conviene exportarlas antes de la fecha límite:
+
+- [Fase 2 — Análisis] Grabación conferencia web. GA1-220501092-AA2-EV02
+- [Fase 3 — Programación] Evidencia GA4-220501095-AA3-EV02. Foro - Implementar la arquitectura de software
+- [Fase 3 — Programación] Evidencia GA3-220501093-AA2-EV02. Foro temático - Estructuras de programación
+- [Fase 5 — Ejecución] Evidencia GA8-220501096-AA2-EV03. Taller. Integración, tecnologías emergentes y disruptivas
+- [Fase 5 — Ejecución] Video exposición sobre machine learning. GA8-220501096-AA2-EV04
+- [Fase 5 — Ejecución] Evidencia GA6-220501096-AA4-EV01. Fundamentos en la implementación de componentes front
+- [Fase 5 — Ejecución] Evidencia GA9-220501096-AA1-EV01. Taller sobre codificación de módulos del software
+- [Fase 5 — Ejecución] GA9-220501096-AA1-EV02_Plan_Pruebas_TruequeMatch
+- [Fase 5 — Ejecución] Evid.GA9-220501096-AA2-EV01-AA3-EV01-AA3-EV02
+- [Fase 6 — Despliegue] Evidencia GA10-220501097-AA2-EV01. Elaborar plan de validación de características mínimas de
+- [Fase 6 — Despliegue] Evidencia GA10-220501097-AA4-EV01. Conceptos y principios acerca de configuración de servicios
+- [Fase 6 — Despliegue] Evidencia GA10-220501097-AA5-EV01. Configuración de servicios, bases de datos y software en el
+- [Fase 6 — Despliegue] Evidencia GA10-220501097-AA7-EV01. Realización de pruebas de funcionalidad del software
+
+Las siguientes tienen **solo PDF** (sin el Word original a mano, por si hace falta editarlas):
+
+- [Fase 2 — Análisis] GA2-220501093-AA2-EV01 Elaboración de los diagramas del modelo de dominio del proyecto
+- [Fase 3 — Programación] GA2-220501094-AA4-EV02. Propuesta técnica y económica con ajustes
+
+Las siguientes están en **otro formato** y conviene revisarlas manualmente (probablemente `.zip`, `.xlsx` u otro tipo distinto a Word/PDF):
+
+- [Fase 3 — Programación] Evidencia GA3-220501093-AA2-EV03. EJERCICIOS
+- [Fase 5 — Ejecución] GA6-220501096-AA4-EV02 + EV03
+- [Fase 5 — Ejecución] Evidencia GA6-220501096-AA1-EV04. Elaboración de las bases de datos
+
+---
+
+## ⚠️ Sobre lo que NO está en este repo (a propósito)
+
+- **Grabaciones de las conferencias semanales (`.mp4`)** y el instalador de MySQL (`.msi`): excluidos con `.gitignore` por peso (algunas superan el límite de 100 MB de GitHub) y porque no son la evidencia en sí, solo el respaldo de la reunión.
+- **`conexion_produccion.php`**: excluido por seguridad — contiene las credenciales reales de la base de datos de producción en InfinityFree.
+
+## 🔗 Enlaces relacionados
+
+- 💻 Repositorio del código de Trueque Match: https://github.com/lopezoviedogersonjonnathan-rgb/proyecto_sena
+- 🌐 Trueque Match en producción: http://truequematch-gerson.great-site.net/truequematch/app_trueque_match/
