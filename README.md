@@ -117,6 +117,7 @@ Repositorio de respaldo con todas las evidencias del programa **Tecnólogo en An
 | GA6-220501096-AA4-EV02 + EV03 | ⚠️ Otro formato |
 | Evidencia GA6-220501096-AA1-EV02. Modelo entidad relación de caso | ✅ Word + PDF |
 | Evidencia GA6-220501096-AA1-EV04. Elaboración de las bases de datos | ⚠️ Otro formato |
+| Evidencia GA6-220501096-AA1-EV04. Elaboración de las bases de datos | ✅ Word + PDF |
 | Evidencia GA6-220501096-AA1-EV03. Creación de los objetos de la base de datos | ✅ Word + PDF |
 | Evidencia GA6-220501096-AA2-EV01. Destrezas y conocimientos en el manejo de sentencias DDL y | ✅ Word + PDF |
 | Evidencia GA6-220501096-AA2-EV02. Creación de la estructura de la BD y aplicación de restricciones | ✅ Word + PDF |
