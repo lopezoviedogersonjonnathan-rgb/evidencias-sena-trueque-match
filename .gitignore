@@ -3,3 +3,7 @@
 *.exe
 **/ffmpeg-9.0.1-essentials_build/
 **/conexion_produccion*.php
+
+(7) FASE 4. EVALUACION/MATERIAL DE FORMACION/**
+!(7) FASE 4. EVALUACION/MATERIAL DE FORMACION/**/
+!(7) FASE 4. EVALUACION/MATERIAL DE FORMACION/**/*.pdf
