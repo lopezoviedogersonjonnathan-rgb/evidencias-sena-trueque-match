@@ -7,3 +7,31 @@
 (7) FASE 4. EVALUACION/MATERIAL DE FORMACION/**
 !(7) FASE 4. EVALUACION/MATERIAL DE FORMACION/**/
 !(7) FASE 4. EVALUACION/MATERIAL DE FORMACION/**/*.pdf
+
+# Archivos temporales de Word
+~$*
+
+# Videos (GitHub rechaza archivos de mas de 100 MB)
+*.[mM][pP]4
+*.[mM][oO][vV]
+*.[aA][vV][iI]
+*.[mM][kK][vV]
+*.[wW][mM][vV]
+*.[wW][eE][bB][mM]
+*.[fF][lL][vV]
+*.[mM]4[vV]
+*.3[gG][pP]
+
+# Audio (grabaciones de clases)
+*.[mM][pP]3
+*.[wW][aA][vV]
+*.[mM]4[aA]
+
+# Comprimidos
+*.[zZ][iI][pP]
+*.[rR][aA][rR]
+*.7[zZ]
+
+# Basura de Windows
+Thumbs.db
+desktop.ini
