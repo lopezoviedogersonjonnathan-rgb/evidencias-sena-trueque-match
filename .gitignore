@@ -35,3 +35,7 @@
 # Basura de Windows
 Thumbs.db
 desktop.ini
+
+# Temporales de Word
+~WRL*.tmp
+*.tmp
