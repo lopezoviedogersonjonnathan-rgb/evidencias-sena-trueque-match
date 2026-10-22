@@ -29,7 +29,7 @@
 
 | Recurso | Enlace |
 |---|---|
-| 🌍 **Sitio web en vivo** | [truequematch-gerson.great-site.net](https://truequematch-gerson.great-site.net) |
+| 🌍 **Sitio web en vivo** | [truequematchsena.site.je](https://truequematchsena.site.je/app_trueque_match/) |
 | 📱 **APK Android** | [Descargar APK Trueque Match](https://expo.dev/accounts/gjlo/projects/TruequeMatchApp/builds/abf8bc23-d4b8-4f1b-b926-f3e070d261f6) |
 | 🔒 **HTTPS** | Certificado SSL activo en InfinityFree |
 | 🗄️ **Base de datos** | MySQL en producción (InfinityFree) |
@@ -67,27 +67,35 @@
 ```
 evidencias-sena-trueque-match/
 │
-├── 📂 (1) Fase de inducción/
-│   └── Primeros pasos, conocimiento del programa SENA y entorno
+├── 📄 Portada SENA.docx
 │
-├── 📂 (2) Fase de análisis/
-│   ├── Grabaciones de conferencias web GA1 y GA2
-│   └── Materiales de formación y recursos de aprendizaje
+├── 📂 (0) Fase de inducción/
+│   ├── Diseño curricular e información del programa (PDF)
+│   └── Documentos de interés para el aprendiz
 │
-├── 📂 (3) Fase de análisis 3 programación/
+├── 📂 (1) Fase 1 análisis/
+│   ├── 📂 (1) Actividad de proyecto 1
+│   ├── 📂 (2) Actividad de proyecto 2
+│   ├── 📂 Alcances
+│   └── 📂 Apuntes rescatados
+│
+├── 📂 (2) Fase 2 Planeación/
+│   └── 📂 Actividad de proyecto 3
+│
+├── 📂 (3) Fase de analisis 3 programación/
 │   └── Fundamentos de programación y lógica
 │
-├── 📂 (4) Fase Actividad de proyecto 5 — Planeación/
-│   ├── Propuesta técnica y económica (GA2)
-│   ├── Diagrama de clases UML (GA4)
-│   ├── Modelo conceptual Draw.io + MySQL Workbench (GA4)
-│   ├── Diccionario de datos (GA4)
-│   ├── Prototipo interactivo HTML 7 pantallas (GA5)
-│   ├── Mapa de navegación 20 secciones (GA5)
-│   ├── Usabilidad WCAG 2.1 + heurísticas Nielsen (GA5)
-│   └── Maquetación XML Android — App React Native (GA5)
+├── 📂 (4) Fase Actividad de proyecto 5 Fase 2. Planeación/
+│   ├── 📂 (1) a (8)  Evidencias GA5-AA1-EV01 a EV08
+│   │       ├── Taller de construcción del prototipo del software (EV01)
+│   │       ├── Reglas de usabilidad y accesibilidad (EV02 y EV06)
+│   │       ├── Interfaz gráfica y mapa de navegación (EV03, EV05 y EV07)
+│   │       ├── Maquetación de la interfaz gráfica en HTML (EV04)
+│   │       └── Evidencia GA5-AA1-EV08
+│   ├── 📄 Guía de aprendizaje 5 (PDF)
+│   └── 📂 Materiales de esta unidad
 │
-├── 📂 (5) Fase 3 — Ejecución/
+├── 📂 (5) Fase 3. Ejecución/
 │   ├── 📂 GUIA DE APRENDIZAJE 6/
 │   │   ├── Modelo relacional 10 tablas + normalización (GA6-AA1-EV01)
 │   │   ├── Sentencias DDL y DML SQL — tabla libreta (GA6-AA2-EV01)
@@ -98,25 +106,46 @@ evidencias-sena-trueque-match/
 │   │   ├── Componentes front-end HTML especificados (GA6-AA4-EV02)
 │   │   └── Diseño front-end completo HTML+CSS+JS en ZIP (GA6-AA4-EV03)
 │   │
-│   ├── 📂 GUIA DE APRENDIZAJE 7/
-│   │   └── Estándares codificación + Git + GitHub + GitFlow (GA7-AA1-EV01)
+│   ├── 📂 Guía de aprendizaje 7/
+│   │   ├── Estándares de codificación, herramientas de versionamiento, Git y GitHub (GA7-AA1)
+│   │   ├── Talleres de componentes front-end (GA7-AA4-EV01 a EV03)
+│   │   ├── Diseño y desarrollo de servicios web — login y registro (GA7-AA5-EV01)
+│   │   └── APIs probadas en Postman (GA7-AA5-EV02 a EV04)
 │   │
-│   └── 📂 GUIA DE APRENDIZAJE 8/
-│       └── Tecnologías emergentes y disruptivas (GA8-AA2-EV01)
+│   ├── 📂 Guía de aprendizaje 8/
+│   │   ├── Integración de módulos del software (GA8-AA1-EV01 y EV02)
+│   │   ├── Módulos móviles — APK (GA8-AA2-EV02)
+│   │   └── Tecnologías emergentes y disruptivas, texto sobre blockchain (GA8-AA2-EV01, EV03 y EV05)
+│   │
+│   └── 📂 Guía de aprendizaje 9/
+│       ├── Taller sobre codificación de módulos del software (GA9-AA1-EV01)
+│       └── Evidencias GA9-AA2-EV01, AA3-EV01 y AA3-EV02
 │
-├── 📂 Actividad de proyecto 8/                    ← ⭐ MÁS SIGNIFICATIVA
-│   ├── Pruebas de funcionalidad web (GA10-AA7-EV01)
-│   ├── Plan de mantenimiento y soporte (GA10-AA8-EV01)
-│   └── 📂 (6) Evidencia GA10-AA5-EV01 + AA6-EV01
-│       ├── VirtualBox instalado + Ubuntu corriendo
-│       ├── XAMPP para Linux — Apache + MySQL en verde
-│       ├── Docker con Apache en contenedor puerto 8080
-│       ├── Trueque Match desplegado en InfinityFree
-│       ├── HTTPS activo con certificado SSL válido
-│       └── 📄 Evidencia GA10-AA5-AA6-EV01.pdf  ← Ver aquí
+├── 📂 (6) Actividad de proyecto 8/                    ← ⭐ MÁS SIGNIFICATIVA
+│   ├── Guía de aprendizaje 10 (PDF)
+│   ├── 📂 (1) a (4)  Evidencias GA10-AA1 a AA4 (validación, instalación y configuración de servicios)
+│   ├── 📂 (5) Evidencia GA10-AA5-EV01 — Configuración de servicios, bases de datos y software
+│   ├── 📂 (6) Evidencia GA10-AA5-EV01 + AA6-EV01 — Llevar Trueque Match a internet
+│   │       ├── VirtualBox + Ubuntu + XAMPP para Linux + Docker con Apache (puerto 8080)
+│   │       ├── Trueque Match desplegado en InfinityFree con HTTPS
+│   │       └── 📄 Evidencia GA10-AA5-AA6-EV01  ← Ver aquí
+│   ├── 📂 (7) Evidencia GA10-AA7-EV01 — Pruebas de funcionalidad
+│   ├── 📂 (8) Evidencia GA10-AA8-EV01 — Plan de mantenimiento y soporte
+│   ├── 📂 (9) Evidencia GA10-AA9-EV01 — Plan de migración y respaldo de los datos
+│   ├── 📂 (10) Evidencia GA10-AA10-EV01 — Documentos técnicos y de usuario
+│   ├── 📂 (11) Evidencia GA10-AA11-EV01 — Manual de usuario
+│   ├── 📂 (12) Evidencia GA10-AA12-EV01 — Plan de capacitación y pruebas
+│   └── 📂 (13) Evidencia GA10-AA13-EV01 — Plan de capacitación y acta de entrega
 │
-└── 📂 Explican el proyecto para las IAs/
-    └── Documentos de contexto para continuidad del proyecto
+├── 📂 (7) FASE 4. EVALUACION/
+│   ├── 📂 ACTIVIDAD DE PROYECTO 9
+│   └── 📂 MATERIAL DE FORMACION
+│
+└── 📂 DIAGRAMAS/
+    ├── Diagrama entidad-relación (EER, MySQL Workbench)
+    ├── Diagramas de casos de uso y mapa de navegación
+    ├── Diagrama de componentes (v2)
+    └── Diagrama de paquetes (v2)
 ```
 
 ---
@@ -190,7 +219,7 @@ de despliegue profesional:
         ↓
 🔒 HTTPS activo + certificado SSL válido
         ↓
-🌍 truequematch-gerson.great-site.net
+🌍 truequematchsena.site.je
 ```
 
 **Esto es el ciclo completo de un despliegue profesional:**
@@ -223,7 +252,7 @@ desarrollo local → virtualización → contenedores → producción real en in
 
 ## 🔒 Seguridad del Repositorio
 
-- `conexion_produccion.php` excluido via `.gitignore` — credenciales nunca versionadas
+- El archivo de conexión de producción vive solo dentro del hosting y no se versiona (`conexion_produccion.php` excluido via `.gitignore`)
 - Archivos temporales de Word (`~$*.docx`) excluidos
 - Ejecutables `.exe`, `.msi` y videos `.mp4` excluidos del repo
 - HTTPS activo con certificado SSL en producción
